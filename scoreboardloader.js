@@ -46,6 +46,10 @@ async function fetchAndProcessData() {
         );
         uniquePlayers.sort((a, b) => b.fantasy_points - a.fantasy_points);
 
+        uniquePlayers.forEach((player, i) => {
+            player.rank = i + 1;
+        });
+
         const getPoints = (playerName) => {
             const player = uniquePlayers.find(p => p.name === playerName);
             return player ? player.fantasy_points : 0;
@@ -68,6 +72,10 @@ async function fetchAndProcessData() {
         })
 
         teamsData.sort((a, b) => b.total_score - a.total_score);
+        
+        teamsData.forEach((team, i) => {
+            team.rank = i + 1;
+        });
 
         return {teams: teamsData, players: uniquePlayers}
 
@@ -108,7 +116,7 @@ async function loadData(){
 function setupTableSorting(tableId, data, populateFunction) {
     const table = document.getElementById(tableId);
     const headers = table.querySelectorAll('th.sortable');
-    let currentSort = {column: null, direction: 'asc'};
+    let currentSort = {column: null, direction: 'desc'};
 
     headers.forEach(header => {
         header.addEventListener('click', () => {
@@ -118,7 +126,7 @@ function setupTableSorting(tableId, data, populateFunction) {
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
             } else {
-                currentSort.direction = 'asc';
+                currentSort.direction = type === 'number' ? 'desc' : 'asc';
             }
             currentSort.column = column;
 
@@ -179,7 +187,7 @@ function populateFullTeams(teams) {
     const tbody = document.getElementById('full-teams-body');
     tbody.innerHTML = teams.map((team, index) => `
         <tr>
-            <td class="rank">${index + 1}</td>
+            <td class="rank">${team.rank}</td>
             <td>${team.team}</td>
             <td>${team.p1} (${team.p1_points})</td>
             <td>${team.p2} (${team.p2_points})</td>
