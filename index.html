@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Big Ten Basketball Standings</title>
+    <meta name="description" content="Standings for the 2025-26 Dream B1G Fantasy Basketball Contest">
+    <link rel="stylesheet" href = "stylesheet.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest"> 
+
+    <!-- Facebook Meta Tags -->   
+    <meta property="og:url" content="https://levin-ari.github.io/fantasy-basketball">   
+    <meta property="og:type" content="website">   
+    <meta property="og:title" content="Fantasy Big Ten Basketball Standings">
+    <meta property="og:description" content="Standings for the 2025-26 Dream B1G Fantasy Basketball Contest">
+    <meta property="og:image" content="social-preview.png">  
+    
+    <!-- Twitter Meta Tags -->   
+    <meta name="twitter:card" content="summary_large_image">   
+    <meta property="twitter:domain" content="https://levin-ari.github.io/fantasy-basketball">   
+    <meta property="twitter:url" content="https://yourwebsite.com">   
+    <meta name="twitter:title" content="Fantasy Big Ten Basketball Standings">   
+    <meta name="twitter:description" content="Standings for the 2025-26 Dream B1G Fantasy Basketball Contest">   
+    <meta name="twitter:image" content="social-preview.png">
+    
+    <script src="scoreboardloader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏀 Dream B1G's Fantasy Basketball 🏀</h1>
+            <p>2025-26 Full Season Standings</p>
+        </div>
+
+        <div id="loading" class="loading">Loading Standings...</div>
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="content" style="display: none;">
+            <div class="summary-section">
+                <div class="card">
+                    <h2>🏆 Top Teams</h2>
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-teams-body"></tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <h2>⭐ Top Players</h2>
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-players-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="full-tables-section">
+                <div class="full-table-card">
+                    <h2>📊 All Fantasy Teams</h2>
+                    <table class="full-table" id="teams-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>Lauren Betts</th>
+                                <th class="sortable" data-column="p2_points" data-type="number">Scorer</th>
+                                <th class="sortable" data-column="p3_points" data-type="number">All-Conf</th>
+                                <th class="sortable" data-column="p4_points" data-type="number">Newcomer</th>
+                                <th class="sortable" data-column="p5_points" data-type="number">Shooter</th>
+                                <th class="sortable" data-column="p6_points" data-type="number">Post</th>
+                                <th class="sortable" data-column="p7_points" data-type="number">Guard</th>
+                                <th class="sortable" data-column="p8_points" data-type="number">Forward</th>
+                                <th class="sortable" data-column="p9_points" data-type="number">Freshman</th>
+                                <th class="sortable" data-column="p10_points" data-type="number">Wildcard</th>
+                                <th class="sortable" data-column="total_score" data-type="number">Total Points</th>
+                            </tr>
+                        </thead>
+                        <tbody id="full-teams-body"></tbody>
+                    </table>
+                </div>
+
+                <div class="full-table-card">
+                    <h2>💪 All Big Ten Players</h2>
+                    <table class="full-table" id="players-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th class="sortable" data-column="games" data-type="number">Games</th>
+                                <th class="sortable" data-column="minutes" data-type="number">Minutes</th>
+                                <th class="sortable" data-column="points" data-type="number">Points</th>
+                                <th class="sortable" data-column="rebounds" data-type="number">Rebounds</th>
+                                <th class="sortable" data-column="assists" data-type="number">Assists</th>
+                                <th class="sortable" data-column="blocks" data-type="number">Blocks</th>
+                                <th class="sortable" data-column="steals" data-type="number">Steals</th>
+                                <th class="sortable" data-column="threes" data-type="number">3-Pointers</th>
+                                <th>Fantasy Points</th>
+                                <th class="sortable" data-column="points_per_game" data-type="number">Pts per Game</th>
+                            </tr>
+                        </thead>
+                        <tbody id="full-players-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
