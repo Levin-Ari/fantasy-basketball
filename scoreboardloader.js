@@ -370,13 +370,14 @@ function populateTopByCategory() {
             `;
         };
     });
-    const totalRow = `
+    html += `
         <tr style="font-weight: bold; background-color: #f8f8f8;">
             <td colspan="3" style="text-align: left;">Total Fantasy Points:</td>
             <td class="points">${totalPoints}</td>
+        </tr>
     `
-
-    tbody.innerHTML = html + totalRow;
+    
+    tbody.innerHTML = html;
 }
 
 loadData();
