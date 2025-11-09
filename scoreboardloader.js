@@ -1,3 +1,8 @@
+let teamsData = [];
+let playersData = [];
+let yesterdayPlayersData = [];
+let positionCategories = {};
+
 //Load data and populate tables
 async function fetchAndProcessData() {
     try {
@@ -92,9 +97,13 @@ async function loadData(){
         teamsData = data.teams;
         playersData = data.players;
 
+        await loadYesterdayData();
+        await loadCategories();
+
         // Populate tables
         populateTopTeams(teamsData.slice(0, 5));
-        populateTopPlayers(playersData.slice(0, 5));
+        populateTopPlayers(playersData.slice(0, 10));
+        populateTopByCategory();
         populateFullTeams(teamsData);
         populateFullPlayers(playersData);
 
@@ -110,6 +119,69 @@ async function loadData(){
         document.getElementById('loading').style.display = 'none';
         const errorDiv = document.getElementById('error')
         errorDiv.textContent = `Error loading data: ${error.message}. Contact Ari with a bug report.`
+    }
+}
+
+async function loadYesterdayData() {
+    try {
+        const yesterday = new Date(
+            new Date().toLocaleString("en-US", {timeZone : 'America/New_York'})
+        );
+        yesterday.setDate(yesterday.getDate() - 1);
+        const year = yesterday.getFullYear();
+        const month = String(yesterday.getMonth() + 1).padStart(2, '0');
+        const day = String(yesterday.getDate()).padStart(2, '0');
+        const filename = `daily-outputs/${year}-${month}-${day}_daily.json`
+
+        const response = await fetch(filename)
+
+        if (!response.ok) {
+            throw new Error(`Yesterday's data not found`)
+        }
+
+        yesterdayPlayersData = await response.json()
+        populateYesterdayPlayers(yesterdayPlayersData.slice(0, 5));
+
+        const dateStr = yesterday.toLocaleDateString("en-US", {
+            timezone: 'America/New_York',
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+        document.getElementById('yesterday-date').textContent = dateStr;
+
+    } catch (error) {
+        console.error('Error loading yesterday data:', error);
+        document.getElementById('yesterday-players-body').innerHTML = `
+        <tr>
+            <td colspan="4" style="text-align: center; padding: 20px; color: #999;">
+                No data available for yesterday
+            </td>
+        </tr>
+    `;
+    document.getElementById('yesterday-date').textContent = 'Data not available';
+    }
+}
+
+async function loadCategories() {
+    try {
+        const response = await fetch('categories.json')
+
+        if (!response.ok) {
+            throw new Error('Positions file not found');
+        }
+
+        positionCategories = await response.json();
+    } catch (error) {
+        console.error('Error loading player categories:', error);
+        document.getElementById('top-by-category-body').innerHTML = `
+        <tr>
+            <td colspan="4" style="text-align: center; padding: 20px; color: #999;">
+                Category data not available
+            </td>
+        </tr>
+        `;
     }
 }
 
@@ -223,6 +295,88 @@ function populateFullPlayers(players) {
             <td>${player.points_per_game.toFixed(1)}</td>
         </tr>
     `).join('');
+}
+
+function populateYesterdayPlayers(players) {
+    const tbody = document.getElementById('yesterday-players-body');
+    tbody.innerHTML = players.map((player, index) => `
+        <tr>
+            <td class="rank">${index + 1}</td>
+            <td>${player.name}</td>
+            <td>${player.team}</td>
+            <td class="points">${player.daily_points}</td>
+        <tr>
+    `).join('');
+}
+
+function populateTopByCategory() {
+    const tbody = document.getElementById('top-by-category-body');
+
+    const positionOrder = [
+        {key: 'p1', label: 'Betts'},
+        {key: 'p2', label: 'Returning Scorer'},
+        {key: 'p3', label: 'All-Conference'},
+        {key: 'p4', label: 'Newcomer'},
+        {key: 'p5', label: 'Shooter'},
+        {key: 'p6', label: 'Post Presence'},
+        {key: 'p7', label: 'Breakout Guard'},
+        {key: 'p8', label: 'Breakout Forward'},
+        {key: 'p9', label: 'Freshman'},
+        {key: 'p10', label: 'Wildcard'}
+    ];
+
+    let html = '';
+    let totalPoints = 0;
+
+    positionOrder.forEach(category => {
+        const playerNames = positionCategories[category.key];
+
+        if (!playerNames || playerNames.length === 0) {
+            html += `
+            <tr>
+                <td style="font-weight: 600;">${category.label}</td>
+                <td colspan="3" style="color: #999;">No data</td>
+            </tr>
+            `;
+            return;
+        }
+
+        let topPlayer = null;
+        let topPoints = -1;
+
+        playerNames.forEach(name => {
+            const player = playersData.find(p => p.name === name);
+            if (player && player.fantasy_points > topPoints) {
+                topPlayer = player;
+                topPoints = player.fantasy_points;
+            }
+        });
+
+        if (topPlayer) {
+            totalPoints += topPlayer.fantasy_points;
+            html += `
+            <tr>
+                <td style="font-weight: 600;">${category.label}</td>
+                <td>${topPlayer.name}</td>
+                <td>${topPlayer.team}</td>
+                <td class="points">${topPlayer.fantasy_points}</td>
+            `
+        } else {
+            html += `
+                <tr>
+                    <td style="font-weight: 600;">${category.label}</td>
+                    <td colspan="3" style="color: #999;">Player not found</td>
+                </tr>
+            `;
+        };
+    });
+    const totalRow = `
+        <tr style="font-weight: bold; background-color: #f8f8f8;">
+            <td colspan="3" style="text-align: left;">Total Fantasy Points:</td>
+            <td class="points">${totalPoints}</td>
+    `
+
+    tbody.innerHTML = html + totalRow;
 }
 
 loadData();
