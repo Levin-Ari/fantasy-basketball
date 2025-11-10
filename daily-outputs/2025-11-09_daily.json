@@ -42,15 +42,15 @@
     "daily_points":0
   },
   {
-    "name":"Nene Ndiaye",
-    "team":"Rutgers",
+    "name":"Destiny Howell",
+    "team":"Wisconsin",
     "fantasy_points":61,
     "past_points":61,
     "daily_points":0
   },
   {
-    "name":"Destiny Howell",
-    "team":"Wisconsin",
+    "name":"Nene Ndiaye",
+    "team":"Rutgers",
     "fantasy_points":61,
     "past_points":61,
     "daily_points":0
@@ -91,6 +91,13 @@
     "daily_points":0
   },
   {
+    "name":"Oluchi Okananwa",
+    "team":"Maryland",
+    "fantasy_points":56,
+    "past_points":56,
+    "daily_points":0
+  },
+  {
     "name":"Makena Christian",
     "team":"Minnesota",
     "fantasy_points":56,
@@ -105,10 +112,10 @@
     "daily_points":0
   },
   {
-    "name":"Oluchi Okananwa",
-    "team":"Maryland",
-    "fantasy_points":56,
-    "past_points":56,
+    "name":"Lauren Betts",
+    "team":"UCLA",
+    "fantasy_points":55,
+    "past_points":55,
     "daily_points":0
   },
   {
@@ -119,22 +126,15 @@
     "daily_points":0
   },
   {
-    "name":"Lauren Betts",
-    "team":"UCLA",
-    "fantasy_points":55,
-    "past_points":55,
-    "daily_points":0
-  },
-  {
-    "name":"Zachara Perkins",
-    "team":"Rutgers",
+    "name":"Saylor Poffenbarger",
+    "team":"Maryland",
     "fantasy_points":53,
     "past_points":53,
     "daily_points":0
   },
   {
-    "name":"Saylor Poffenbarger",
-    "team":"Maryland",
+    "name":"Zachara Perkins",
+    "team":"Rutgers",
     "fantasy_points":53,
     "past_points":53,
     "daily_points":0
@@ -161,8 +161,8 @@
     "daily_points":0
   },
   {
-    "name":"Mila Holloway",
-    "team":"Michigan",
+    "name":"Grace Grocholski",
+    "team":"Minnesota",
     "fantasy_points":48,
     "past_points":48,
     "daily_points":0
@@ -175,15 +175,15 @@
     "daily_points":0
   },
   {
-    "name":"Grace Grocholski",
-    "team":"Minnesota",
+    "name":"Mila Holloway",
+    "team":"Michigan",
     "fantasy_points":48,
     "past_points":48,
     "daily_points":0
   },
   {
-    "name":"Madison Layden-Zay",
-    "team":"Purdue",
+    "name":"Callin Hake",
+    "team":"Nebraska",
     "fantasy_points":47,
     "past_points":47,
     "daily_points":0
@@ -196,8 +196,8 @@
     "daily_points":0
   },
   {
-    "name":"Callin Hake",
-    "team":"Nebraska",
+    "name":"Madison Layden-Zay",
+    "team":"Purdue",
     "fantasy_points":47,
     "past_points":47,
     "daily_points":0
@@ -210,15 +210,15 @@
     "daily_points":0
   },
   {
-    "name":"Kiki Smith",
-    "team":"Purdue",
+    "name":"Grace Sullivan",
+    "team":"Northwestern",
     "fantasy_points":44,
     "past_points":44,
     "daily_points":0
   },
   {
-    "name":"Grace Sullivan",
-    "team":"Northwestern",
+    "name":"Kiki Smith",
+    "team":"Purdue",
     "fantasy_points":44,
     "past_points":44,
     "daily_points":0
@@ -231,6 +231,13 @@
     "daily_points":0
   },
   {
+    "name":"Berry Wallace",
+    "team":"Illinois",
+    "fantasy_points":43,
+    "past_points":43,
+    "daily_points":0
+  },
+  {
     "name":"Amiah Hargrove",
     "team":"Nebraska",
     "fantasy_points":43,
@@ -238,10 +245,10 @@
     "daily_points":0
   },
   {
-    "name":"Berry Wallace",
-    "team":"Illinois",
-    "fantasy_points":43,
-    "past_points":43,
+    "name":"Laci Steele",
+    "team":"Wisconsin",
+    "fantasy_points":42,
+    "past_points":42,
     "daily_points":0
   },
   {
@@ -259,13 +266,6 @@
     "daily_points":0
   },
   {
-    "name":"Laci Steele",
-    "team":"Wisconsin",
-    "fantasy_points":42,
-    "past_points":42,
-    "daily_points":0
-  },
-  {
     "name":"Amaya Battle",
     "team":"Minnesota",
     "fantasy_points":41,
@@ -273,15 +273,15 @@
     "daily_points":0
   },
   {
-    "name":"Sayvia Sellers",
-    "team":"Washington",
+    "name":"Moriah Murray",
+    "team":"Penn State",
     "fantasy_points":41,
     "past_points":41,
     "daily_points":0
   },
   {
-    "name":"Moriah Murray",
-    "team":"Penn State",
+    "name":"Sayvia Sellers",
+    "team":"Washington",
     "fantasy_points":41,
     "past_points":41,
     "daily_points":0
@@ -315,6 +315,20 @@
     "daily_points":0
   },
   {
+    "name":"Ava Heiden",
+    "team":"Iowa",
+    "fantasy_points":39,
+    "past_points":39,
+    "daily_points":0
+  },
+  {
+    "name":"Angela Dugali\u0107",
+    "team":"UCLA",
+    "fantasy_points":39,
+    "past_points":39,
+    "daily_points":0
+  },
+  {
     "name":"Kennedy Blair",
     "team":"Michigan State",
     "fantasy_points":39,
@@ -329,31 +343,10 @@
     "daily_points":0
   },
   {
-    "name":"Angela Dugali\u0107",
-    "team":"UCLA",
-    "fantasy_points":39,
-    "past_points":39,
-    "daily_points":0
-  },
-  {
-    "name":"Ava Heiden",
-    "team":"Iowa",
-    "fantasy_points":39,
-    "past_points":39,
-    "daily_points":0
-  },
-  {
     "name":"Len\u00e9e Beaumont",
     "team":"Indiana",
     "fantasy_points":38,
     "past_points":38,
-    "daily_points":0
-  },
-  {
-    "name":"Kyndal Walker",
-    "team":"Maryland",
-    "fantasy_points":37,
-    "past_points":37,
     "daily_points":0
   },
   {
@@ -364,7 +357,14 @@
     "daily_points":0
   },
   {
-    "name":"Astera Tuhina",
+    "name":"Kyndal Walker",
+    "team":"Maryland",
+    "fantasy_points":37,
+    "past_points":37,
+    "daily_points":0
+  },
+  {
+    "name":"Amina Muhammad",
     "team":"Oregon",
     "fantasy_points":36,
     "past_points":36,
@@ -378,7 +378,7 @@
     "daily_points":0
   },
   {
-    "name":"Amina Muhammad",
+    "name":"Astera Tuhina",
     "team":"Oregon",
     "fantasy_points":36,
     "past_points":36,
@@ -399,15 +399,15 @@
     "daily_points":0
   },
   {
-    "name":"Hailey Weaver",
-    "team":"Nebraska",
+    "name":"Lana McCarthy",
+    "team":"Purdue",
     "fantasy_points":35,
     "past_points":35,
     "daily_points":0
   },
   {
-    "name":"Lana McCarthy",
-    "team":"Purdue",
+    "name":"Hailey Weaver",
+    "team":"Nebraska",
     "fantasy_points":35,
     "past_points":35,
     "daily_points":0
@@ -424,20 +424,6 @@
     "team":"Maryland",
     "fantasy_points":34,
     "past_points":34,
-    "daily_points":0
-  },
-  {
-    "name":"Ari Long",
-    "team":"Oregon",
-    "fantasy_points":33,
-    "past_points":33,
-    "daily_points":0
-  },
-  {
-    "name":"Nevaeh Caffey",
-    "team":"Indiana",
-    "fantasy_points":33,
-    "past_points":33,
     "daily_points":0
   },
   {
@@ -462,8 +448,22 @@
     "daily_points":0
   },
   {
-    "name":"Olivia Olson",
-    "team":"Michigan",
+    "name":"Nevaeh Caffey",
+    "team":"Indiana",
+    "fantasy_points":33,
+    "past_points":33,
+    "daily_points":0
+  },
+  {
+    "name":"Ari Long",
+    "team":"Oregon",
+    "fantasy_points":33,
+    "past_points":33,
+    "daily_points":0
+  },
+  {
+    "name":"Shay Bollin",
+    "team":"Wisconsin",
     "fantasy_points":32,
     "past_points":32,
     "daily_points":0
@@ -476,8 +476,8 @@
     "daily_points":0
   },
   {
-    "name":"Shay Bollin",
-    "team":"Wisconsin",
+    "name":"Olivia Olson",
+    "team":"Michigan",
     "fantasy_points":32,
     "past_points":32,
     "daily_points":0
@@ -487,13 +487,6 @@
     "team":"Northwestern",
     "fantasy_points":31,
     "past_points":31,
-    "daily_points":0
-  },
-  {
-    "name":"Janae Walker",
-    "team":"Rutgers",
-    "fantasy_points":30,
-    "past_points":30,
     "daily_points":0
   },
   {
@@ -511,15 +504,22 @@
     "daily_points":0
   },
   {
-    "name":"Te'Yala Delfosse",
-    "team":"Michigan",
-    "fantasy_points":29,
-    "past_points":29,
+    "name":"Janae Walker",
+    "team":"Rutgers",
+    "fantasy_points":30,
+    "past_points":30,
     "daily_points":0
   },
   {
     "name":"Sarah Rambus",
     "team":"Oregon",
+    "fantasy_points":29,
+    "past_points":29,
+    "daily_points":0
+  },
+  {
+    "name":"Te'Yala Delfosse",
+    "team":"Michigan",
     "fantasy_points":29,
     "past_points":29,
     "daily_points":0
@@ -539,29 +539,8 @@
     "daily_points":0
   },
   {
-    "name":"Jazzy Davidson",
-    "team":"USC",
-    "fantasy_points":27,
-    "past_points":27,
-    "daily_points":0
-  },
-  {
     "name":"Kara Dunn",
     "team":"USC",
-    "fantasy_points":27,
-    "past_points":27,
-    "daily_points":0
-  },
-  {
-    "name":"Finau Tonga",
-    "team":"Minnesota",
-    "fantasy_points":27,
-    "past_points":27,
-    "daily_points":0
-  },
-  {
-    "name":"Vitoria Santana",
-    "team":"Penn State",
     "fantasy_points":27,
     "past_points":27,
     "daily_points":0
@@ -574,17 +553,24 @@
     "daily_points":0
   },
   {
-    "name":"Londynn Jones",
-    "team":"USC",
-    "fantasy_points":26,
-    "past_points":26,
+    "name":"Vitoria Santana",
+    "team":"Penn State",
+    "fantasy_points":27,
+    "past_points":27,
     "daily_points":0
   },
   {
-    "name":"Jalyn Brown",
-    "team":"Michigan State",
-    "fantasy_points":26,
-    "past_points":26,
+    "name":"Jazzy Davidson",
+    "team":"USC",
+    "fantasy_points":27,
+    "past_points":27,
+    "daily_points":0
+  },
+  {
+    "name":"Finau Tonga",
+    "team":"Minnesota",
+    "fantasy_points":27,
+    "past_points":27,
     "daily_points":0
   },
   {
@@ -609,6 +595,20 @@
     "daily_points":0
   },
   {
+    "name":"Jalyn Brown",
+    "team":"Michigan State",
+    "fantasy_points":26,
+    "past_points":26,
+    "daily_points":0
+  },
+  {
+    "name":"Londynn Jones",
+    "team":"USC",
+    "fantasy_points":26,
+    "past_points":26,
+    "daily_points":0
+  },
+  {
     "name":"Emily Fisher",
     "team":"Nebraska",
     "fantasy_points":26,
@@ -623,15 +623,15 @@
     "daily_points":0
   },
   {
-    "name":"Emely Rodriguez",
-    "team":"Iowa",
+    "name":"Kennedy Smith",
+    "team":"USC",
     "fantasy_points":24,
     "past_points":24,
     "daily_points":0
   },
   {
-    "name":"Kennedy Smith",
-    "team":"USC",
+    "name":"Emely Rodriguez",
+    "team":"Iowa",
     "fantasy_points":24,
     "past_points":24,
     "daily_points":0
@@ -644,8 +644,8 @@
     "daily_points":0
   },
   {
-    "name":"Ashley Sofilkanich",
-    "team":"Michigan",
+    "name":"Isaline Alexander",
+    "team":"Michigan State",
     "fantasy_points":22,
     "past_points":22,
     "daily_points":0
@@ -665,8 +665,8 @@
     "daily_points":0
   },
   {
-    "name":"Isaline Alexander",
-    "team":"Michigan State",
+    "name":"Ashley Sofilkanich",
+    "team":"Michigan",
     "fantasy_points":22,
     "past_points":22,
     "daily_points":0
@@ -686,22 +686,8 @@
     "daily_points":0
   },
   {
-    "name":"Sienna Harvey",
-    "team":"Washington",
-    "fantasy_points":21,
-    "past_points":21,
-    "daily_points":0
-  },
-  {
     "name":"Chazadi Wright",
     "team":"Iowa",
-    "fantasy_points":21,
-    "past_points":21,
-    "daily_points":0
-  },
-  {
-    "name":"Maddie Webber",
-    "team":"Illinois",
     "fantasy_points":21,
     "past_points":21,
     "daily_points":0
@@ -714,6 +700,27 @@
     "daily_points":0
   },
   {
+    "name":"Maddie Webber",
+    "team":"Illinois",
+    "fantasy_points":21,
+    "past_points":21,
+    "daily_points":0
+  },
+  {
+    "name":"Sienna Harvey",
+    "team":"Washington",
+    "fantasy_points":21,
+    "past_points":21,
+    "daily_points":0
+  },
+  {
+    "name":"Janiyah Williams",
+    "team":"Oregon",
+    "fantasy_points":20,
+    "past_points":20,
+    "daily_points":0
+  },
+  {
     "name":"Dayana Mendes",
     "team":"USC",
     "fantasy_points":20,
@@ -723,13 +730,6 @@
   {
     "name":"Destiny Jackson",
     "team":"Illinois",
-    "fantasy_points":20,
-    "past_points":20,
-    "daily_points":0
-  },
-  {
-    "name":"Janiyah Williams",
-    "team":"Oregon",
     "fantasy_points":20,
     "past_points":20,
     "daily_points":0
@@ -749,6 +749,13 @@
     "daily_points":0
   },
   {
+    "name":"Addi Mack",
+    "team":"Maryland",
+    "fantasy_points":18,
+    "past_points":18,
+    "daily_points":0
+  },
+  {
     "name":"Niamya Holloway",
     "team":"Minnesota",
     "fantasy_points":18,
@@ -763,10 +770,10 @@
     "daily_points":0
   },
   {
-    "name":"Addi Mack",
-    "team":"Maryland",
-    "fantasy_points":18,
-    "past_points":18,
+    "name":"Olivia Anderson",
+    "team":"Washington",
+    "fantasy_points":17,
+    "past_points":17,
     "daily_points":0
   },
   {
@@ -791,10 +798,10 @@
     "daily_points":0
   },
   {
-    "name":"Olivia Anderson",
-    "team":"Washington",
-    "fantasy_points":17,
-    "past_points":17,
+    "name":"Antonia Bates",
+    "team":"Rutgers",
+    "fantasy_points":16,
+    "past_points":16,
     "daily_points":0
   },
   {
@@ -812,15 +819,8 @@
     "daily_points":0
   },
   {
-    "name":"Antonia Bates",
-    "team":"Rutgers",
-    "fantasy_points":16,
-    "past_points":16,
-    "daily_points":0
-  },
-  {
-    "name":"Yulia Grabovskaia",
-    "team":"Washington",
+    "name":"Saige Stahl",
+    "team":"Purdue",
     "fantasy_points":15,
     "past_points":15,
     "daily_points":0
@@ -833,8 +833,8 @@
     "daily_points":0
   },
   {
-    "name":"Saige Stahl",
-    "team":"Purdue",
+    "name":"Yulia Grabovskaia",
+    "team":"Washington",
     "fantasy_points":15,
     "past_points":15,
     "daily_points":0
@@ -847,13 +847,6 @@
     "daily_points":0
   },
   {
-    "name":"Logan Nissley",
-    "team":"Nebraska",
-    "fantasy_points":15,
-    "past_points":15,
-    "daily_points":0
-  },
-  {
     "name":"Taylor Feldman",
     "team":"Purdue",
     "fantasy_points":15,
@@ -861,8 +854,15 @@
     "daily_points":0
   },
   {
-    "name":"Ava McKennie",
-    "team":"Maryland",
+    "name":"Logan Nissley",
+    "team":"Nebraska",
+    "fantasy_points":15,
+    "past_points":15,
+    "daily_points":0
+  },
+  {
+    "name":"Kennadi Williams",
+    "team":"Nebraska",
     "fantasy_points":14,
     "past_points":14,
     "daily_points":0
@@ -875,15 +875,15 @@
     "daily_points":0
   },
   {
-    "name":"Rainey Welson",
-    "team":"Maryland",
+    "name":"Shayla Smith",
+    "team":"Penn State",
     "fantasy_points":14,
     "past_points":14,
     "daily_points":0
   },
   {
-    "name":"Kennadi Williams",
-    "team":"Nebraska",
+    "name":"Rainey Welson",
+    "team":"Maryland",
     "fantasy_points":14,
     "past_points":14,
     "daily_points":0
@@ -896,6 +896,13 @@
     "daily_points":0
   },
   {
+    "name":"Ava McKennie",
+    "team":"Maryland",
+    "fantasy_points":14,
+    "past_points":14,
+    "daily_points":0
+  },
+  {
     "name":"Abbey Kimball",
     "team":"Michigan State",
     "fantasy_points":14,
@@ -903,22 +910,8 @@
     "daily_points":0
   },
   {
-    "name":"Shayla Smith",
-    "team":"Penn State",
-    "fantasy_points":14,
-    "past_points":14,
-    "daily_points":0
-  },
-  {
-    "name":"Lena Bilic",
-    "team":"UCLA",
-    "fantasy_points":13,
-    "past_points":13,
-    "daily_points":0
-  },
-  {
-    "name":"Lety Vasconcelos",
-    "team":"Illinois",
+    "name":"Tate Lash",
+    "team":"Northwestern",
     "fantasy_points":13,
     "past_points":13,
     "daily_points":0
@@ -938,15 +931,22 @@
     "daily_points":0
   },
   {
-    "name":"Cearah Parchment",
+    "name":"Lena Bilic",
+    "team":"UCLA",
+    "fantasy_points":13,
+    "past_points":13,
+    "daily_points":0
+  },
+  {
+    "name":"Lety Vasconcelos",
     "team":"Illinois",
     "fantasy_points":13,
     "past_points":13,
     "daily_points":0
   },
   {
-    "name":"Tate Lash",
-    "team":"Northwestern",
+    "name":"Cearah Parchment",
+    "team":"Illinois",
     "fantasy_points":13,
     "past_points":13,
     "daily_points":0
@@ -959,13 +959,6 @@
     "daily_points":0
   },
   {
-    "name":"Marah Dykstra",
-    "team":"Michigan State",
-    "fantasy_points":12,
-    "past_points":12,
-    "daily_points":0
-  },
-  {
     "name":"Nya Smith",
     "team":"Purdue",
     "fantasy_points":12,
@@ -973,15 +966,22 @@
     "daily_points":0
   },
   {
-    "name":"Phoenix Stotijn",
-    "team":"Indiana",
+    "name":"Marah Dykstra",
+    "team":"Michigan State",
+    "fantasy_points":12,
+    "past_points":12,
+    "daily_points":0
+  },
+  {
+    "name":"Chloe Briggs",
+    "team":"Washington",
     "fantasy_points":11,
     "past_points":11,
     "daily_points":0
   },
   {
-    "name":"Lily Krahn",
-    "team":"Wisconsin",
+    "name":"Maya Makalusky",
+    "team":"Indiana",
     "fantasy_points":11,
     "past_points":11,
     "daily_points":0
@@ -994,7 +994,21 @@
     "daily_points":0
   },
   {
-    "name":"Maya Makalusky",
+    "name":"Brynn McGaughy",
+    "team":"Washington",
+    "fantasy_points":11,
+    "past_points":11,
+    "daily_points":0
+  },
+  {
+    "name":"Lily Krahn",
+    "team":"Wisconsin",
+    "fantasy_points":11,
+    "past_points":11,
+    "daily_points":0
+  },
+  {
+    "name":"Phoenix Stotijn",
     "team":"Indiana",
     "fantasy_points":11,
     "past_points":11,
@@ -1008,31 +1022,10 @@
     "daily_points":0
   },
   {
-    "name":"Brynn McGaughy",
-    "team":"Washington",
-    "fantasy_points":11,
-    "past_points":11,
-    "daily_points":0
-  },
-  {
     "name":"Journey Houston",
     "team":"Iowa",
     "fantasy_points":11,
     "past_points":11,
-    "daily_points":0
-  },
-  {
-    "name":"Chloe Briggs",
-    "team":"Washington",
-    "fantasy_points":11,
-    "past_points":11,
-    "daily_points":0
-  },
-  {
-    "name":"Shaelyn Steele",
-    "team":"Penn State",
-    "fantasy_points":10,
-    "past_points":10,
     "daily_points":0
   },
   {
@@ -1043,15 +1036,22 @@
     "daily_points":0
   },
   {
-    "name":"Shayla Gillmer",
-    "team":"Washington",
+    "name":"Shaelyn Steele",
+    "team":"Penn State",
+    "fantasy_points":10,
+    "past_points":10,
+    "daily_points":0
+  },
+  {
+    "name":"Filippa Tilliander",
+    "team":"Oregon",
     "fantasy_points":9,
     "past_points":9,
     "daily_points":0
   },
   {
-    "name":"Laura Williams",
-    "team":"USC",
+    "name":"Shayla Gillmer",
+    "team":"Washington",
     "fantasy_points":9,
     "past_points":9,
     "daily_points":0
@@ -1064,29 +1064,15 @@
     "daily_points":0
   },
   {
-    "name":"Filippa Tilliander",
-    "team":"Oregon",
+    "name":"Laura Williams",
+    "team":"USC",
     "fantasy_points":9,
     "past_points":9,
     "daily_points":0
   },
   {
-    "name":"Alyssa Crockett",
-    "team":"Michigan",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
     "name":"Nina Cain",
     "team":"Washington",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
-    "name":"Yacine N'Diaye",
-    "team":"Rutgers",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1099,14 +1085,21 @@
     "daily_points":0
   },
   {
-    "name":"Taylor Woodson",
-    "team":"Minnesota",
+    "name":"Jessica Fields",
+    "team":"Michigan",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
   },
   {
-    "name":"Ally VanTimmeren",
+    "name":"Addison Deal",
+    "team":"Iowa",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Alyssa Crockett",
     "team":"Michigan",
     "fantasy_points":8,
     "past_points":8,
@@ -1120,8 +1113,22 @@
     "daily_points":0
   },
   {
-    "name":"Jessica Fields",
+    "name":"Yacine N'Diaye",
+    "team":"Rutgers",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Ally VanTimmeren",
     "team":"Michigan",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Taylor Woodson",
+    "team":"Minnesota",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1136,13 +1143,6 @@
   {
     "name":"Makylah Moore",
     "team":"Rutgers",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
-    "name":"Addison Deal",
-    "team":"Iowa",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1169,20 +1169,6 @@
     "daily_points":0
   },
   {
-    "name":"Devin Coppinger",
-    "team":"Washington",
-    "fantasy_points":6,
-    "past_points":6,
-    "daily_points":0
-  },
-  {
-    "name":"Anna Terrian",
-    "team":"Michigan State",
-    "fantasy_points":6,
-    "past_points":6,
-    "daily_points":0
-  },
-  {
     "name":"Ciara Byars",
     "team":"Michigan",
     "fantasy_points":6,
@@ -1197,10 +1183,17 @@
     "daily_points":0
   },
   {
-    "name":"Jerni Kiaku",
-    "team":"Indiana",
-    "fantasy_points":5,
-    "past_points":5,
+    "name":"Anna Terrian",
+    "team":"Michigan State",
+    "fantasy_points":6,
+    "past_points":6,
+    "daily_points":0
+  },
+  {
+    "name":"Devin Coppinger",
+    "team":"Washington",
+    "fantasy_points":6,
+    "past_points":6,
     "daily_points":0
   },
   {
@@ -1220,6 +1213,13 @@
   {
     "name":"Layla Hays",
     "team":"Iowa",
+    "fantasy_points":5,
+    "past_points":5,
+    "daily_points":0
+  },
+  {
+    "name":"Jerni Kiaku",
+    "team":"Indiana",
     "fantasy_points":5,
     "past_points":5,
     "daily_points":0
@@ -1246,27 +1246,6 @@
     "daily_points":0
   },
   {
-    "name":"Alanna Neale",
-    "team":"Nebraska",
-    "fantasy_points":3,
-    "past_points":3,
-    "daily_points":0
-  },
-  {
-    "name":"Kennedy Brandt",
-    "team":"Rutgers",
-    "fantasy_points":3,
-    "past_points":3,
-    "daily_points":0
-  },
-  {
-    "name":"Claire Keswick",
-    "team":"Northwestern",
-    "fantasy_points":3,
-    "past_points":3,
-    "daily_points":0
-  },
-  {
     "name":"Brooklyn Shamblin",
     "team":"USC",
     "fantasy_points":3,
@@ -1281,8 +1260,29 @@
     "daily_points":0
   },
   {
+    "name":"Kennedy Brandt",
+    "team":"Rutgers",
+    "fantasy_points":3,
+    "past_points":3,
+    "daily_points":0
+  },
+  {
     "name":"Angelina Hodgens",
     "team":"Northwestern",
+    "fantasy_points":3,
+    "past_points":3,
+    "daily_points":0
+  },
+  {
+    "name":"Claire Keswick",
+    "team":"Northwestern",
+    "fantasy_points":3,
+    "past_points":3,
+    "daily_points":0
+  },
+  {
+    "name":"Alanna Neale",
+    "team":"Nebraska",
     "fantasy_points":3,
     "past_points":3,
     "daily_points":0
@@ -1309,15 +1309,15 @@
     "daily_points":0
   },
   {
-    "name":"Christina Karamouzi Siegel",
-    "team":"UCLA",
+    "name":"McKenna Layden",
+    "team":"Purdue",
     "fantasy_points":2,
     "past_points":2,
     "daily_points":0
   },
   {
-    "name":"McKenna Layden",
-    "team":"Purdue",
+    "name":"Christina Karamouzi Siegel",
+    "team":"UCLA",
     "fantasy_points":2,
     "past_points":2,
     "daily_points":0
