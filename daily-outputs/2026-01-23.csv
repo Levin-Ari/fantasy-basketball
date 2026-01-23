@@ -6,8 +6,8 @@ Kiyomi McMiller,Penn State,648,20,379,103,90,4,32,21,665,33.25
 Oluchi Okananwa,Maryland,555,21,359,118,41,5,43,19,633,30.142857142857142
 Grace Sullivan,Northwestern,604,18,398,124,25,16,25,0,629,34.94444444444444
 Gracie Merkle,Penn State,513,20,386,156,26,24,6,0,628,31.4
-Kennedy Blair,Michigan State,562,20,266,139,108,9,41,7,620,31.0
 Lauren Betts,UCLA,501,18,290,152,52,43,20,0,620,34.44444444444444
+Kennedy Blair,Michigan State,562,20,266,139,108,9,41,7,620,31.0
 Katie Fiso,Oregon,662,21,324,64,142,6,29,7,607,28.904761904761905
 Sayvia Sellers,Washington,556,19,355,51,63,14,31,44,603,31.736842105263158
 Kiki Rice,UCLA,572,19,289,123,85,13,31,18,603,31.736842105263158
@@ -29,8 +29,8 @@ Saylor Poffenbarger,Maryland,532,19,199,109,62,16,35,32,504,26.526315789473685
 Gabriela Jaquez,UCLA,568,19,281,110,40,2,17,33,502,26.42105263157895
 Nene Ndiaye,Rutgers,603,19,275,104,31,5,31,20,502,26.42105263157895
 Grace Grocholski,Minnesota,613,19,261,99,51,4,15,48,497,26.157894736842106
-Syla Swords,Michigan,562,18,251,78,47,6,29,45,491,27.27777777777778
 Caroline Lau,Northwestern,648,19,152,103,174,4,15,24,491,25.842105263157894
+Syla Swords,Michigan,562,18,251,78,47,6,29,45,491,27.27777777777778
 Cearah Parchment,Illinois,489,19,214,150,23,11,34,13,490,25.789473684210527
 Charlisse Leger-Walker,UCLA,525,19,180,80,115,6,35,31,488,25.68421052631579
 Mila Holloway,Michigan,519,19,237,74,84,4,31,23,488,25.68421052631579
@@ -58,17 +58,17 @@ Amiah Hargrove,Nebraska,403,18,226,104,13,3,14,13,390,21.666666666666668
 Angela Dugalić,UCLA,443,19,180,104,31,10,19,17,390,20.526315789473685
 Sofia Bell,Oregon,619,21,157,56,31,15,39,38,390,18.571428571428573
 Gift Uchenna,Wisconsin,347,20,154,129,11,28,19,0,388,19.4
-Destiny Jackson,Illinois,556,19,151,76,94,1,26,6,381,20.05263157894737
 Brooke Q. Daniels,Michigan,459,19,116,105,56,6,46,0,381,20.05263157894737
+Destiny Jackson,Illinois,556,19,151,76,94,1,26,6,381,20.05263157894737
 Kaylah Ivey,Rutgers,657,19,163,55,69,1,25,35,374,19.68421052631579
 Tea Cleante,Penn State,563,19,175,37,58,4,35,25,373,19.63157894736842
 Ari Long,Oregon,499,21,133,77,34,12,41,20,370,17.61904761904762
 Callin Hake,Nebraska,520,19,158,44,77,1,28,29,366,19.263157894736842
-Addi Mack,Maryland,495,19,201,56,52,3,19,10,363,19.105263157894736
 Jalyn Brown,Michigan State,457,20,200,57,34,8,20,16,363,18.15
+Addi Mack,Maryland,495,19,201,56,52,3,19,10,363,19.105263157894736
 Londynn Jones,USC,463,19,215,31,36,4,19,31,359,18.894736842105264
-Taylor McCabe,Iowa,541,19,161,70,45,6,10,49,357,18.789473684210527
 Maddie Webber,Illinois,454,19,214,54,31,4,8,34,357,18.789473684210527
+Taylor McCabe,Iowa,541,19,161,70,45,6,10,49,357,18.789473684210527
 Kiki Smith,Purdue,479,19,194,41,41,4,18,29,349,18.36842105263158
 Sophie Hart,Minnesota,426,19,182,111,12,7,13,0,345,18.157894736842106
 Tori McKinney,Minnesota,385,15,180,50,34,7,26,13,343,22.866666666666667
@@ -84,8 +84,8 @@ Ashley Sofilkanich,Michigan,312,19,164,67,14,16,15,0,307,16.157894736842106
 Eliza Maupin,Nebraska,304,16,147,77,18,16,10,6,300,18.75
 Lana McCarthy,Purdue,321,19,138,90,19,12,14,0,299,15.736842105263158
 Hila Karsh,Purdue,540,19,154,42,49,1,14,23,298,15.68421052631579
-Laci Steele,Wisconsin,422,20,135,64,18,6,22,20,293,14.65
 Emma Shumate,Michigan State,418,20,134,43,17,14,15,41,293,14.65
+Laci Steele,Wisconsin,422,20,135,64,18,6,22,20,293,14.65
 Faith Blackstone,Rutgers,341,13,143,63,15,9,19,13,290,22.307692307692307
 Elle Ladine,Washington,330,13,140,65,24,7,8,19,278,21.384615384615383
 Xamiya Walton,Northwestern,511,19,146,33,30,2,16,30,275,14.473684210526315
@@ -98,8 +98,8 @@ Petra Bozan,Nebraska,285,19,130,72,8,8,13,5,257,13.526315789473685
 Breauna Ware,Wisconsin,396,20,135,41,26,2,18,14,256,12.8
 Logan Nissley,Nebraska,342,17,118,38,43,3,9,30,253,14.882352941176471
 Yulia Grabovskaia,Washington,278,19,95,89,32,7,11,0,252,13.263157894736842
-Nya Smith,Purdue,351,19,118,61,29,2,13,12,250,13.157894736842104
 Tate Lash,Northwestern,411,19,109,48,49,5,14,6,250,13.157894736842104
+Nya Smith,Purdue,351,19,118,61,29,2,13,12,250,13.157894736842104
 Antonia Bates,Rutgers,472,19,39,97,40,11,20,4,242,12.736842105263158
 Malia Samuels,USC,446,18,63,51,50,6,27,8,238,13.222222222222221
 Kylie Feuerbach,Iowa,388,16,88,27,51,7,21,14,236,14.75
@@ -119,10 +119,10 @@ Addison Deal,Iowa,285,19,111,23,30,3,8,15,201,10.578947368421053
 Astera Tuhina,Oregon,293,19,86,19,43,2,17,13,199,10.473684210526315
 T'yana Todd,Ohio State,309,20,112,28,12,1,12,17,195,9.75
 Viktoria Ranisavljevic,Penn State,294,19,89,29,28,1,15,14,192,10.105263157894736
-Aaliyah Guyton,Illinois,264,15,97,32,34,0,8,9,188,12.533333333333333
 Devin Coppinger,Washington,354,19,83,52,15,3,11,10,188,9.894736842105264
-Layla Hays,Iowa,214,19,96,54,10,7,7,0,188,9.894736842105264
+Aaliyah Guyton,Illinois,264,15,97,32,34,0,8,9,188,12.533333333333333
 Shaelyn Steele,Penn State,261,19,41,60,28,1,28,1,188,9.894736842105264
+Layla Hays,Iowa,214,19,96,54,10,7,7,0,188,9.894736842105264
 Mir McLean,Maryland,238,20,62,69,12,4,18,0,187,9.35
 Finau Tonga,Minnesota,232,19,89,59,14,2,5,0,176,9.263157894736842
 Lety Vasconcelos,Illinois,221,19,72,61,11,12,3,0,174,9.157894736842104
@@ -146,8 +146,8 @@ Amiya Evans,Penn State,207,16,33,67,8,10,7,0,142,8.875
 Alyssa Crockett,Michigan,173,17,60,32,9,4,10,11,140,8.235294117647058
 Shayla Smith,Penn State,179,15,51,48,13,1,12,2,140,9.333333333333334
 Kennadi Williams,Nebraska,266,19,50,16,43,1,10,6,137,7.2105263157894735
-Lena Bilic,UCLA,250,16,62,28,13,5,6,9,134,8.375
 Avery Gordon,Purdue,139,16,69,34,3,9,5,0,134,8.375
+Lena Bilic,UCLA,250,16,62,28,13,5,6,9,134,8.375
 Teagan Brown,Washington,305,19,40,39,9,2,20,1,133,7.0
 McKenzie Mathurin,Michigan,167,13,71,16,8,3,10,11,132,10.153846153846153
 Macy Brown,Michigan,223,17,45,27,23,3,10,8,129,7.588235294117647
@@ -167,34 +167,34 @@ Abbey Kimball,Michigan State,114,12,43,14,10,3,6,11,96,8.0
 Amy Terrian,Michigan State,121,13,44,10,17,0,4,14,93,7.153846153846154
 Jerni Kiaku,Indiana,176,16,37,27,17,0,5,1,92,5.75
 Phoenix Stotijn,Indiana,287,19,42,15,21,3,2,4,92,4.842105263157895
-Taylor Feldman,Purdue,117,7,44,17,14,2,2,8,91,13.0
 Jovana Spasovski,Wisconsin,156,18,54,24,6,1,2,1,91,5.055555555555555
+Taylor Feldman,Purdue,117,7,44,17,14,2,2,8,91,13.0
 Rainey Welson,Maryland,174,15,48,9,7,0,6,10,86,5.733333333333333
-Maggie Mendelson,Penn State,139,10,23,26,10,8,4,2,85,8.5
 DaiJa Turner,Northwestern,181,18,13,34,2,10,8,0,85,4.722222222222222
 Seini Henry,Ohio State,98,13,32,34,4,3,4,1,85,6.538461538461538
+Maggie Mendelson,Penn State,139,10,23,26,10,8,4,2,85,8.5
 Chloe Briggs,Washington,175,16,30,28,11,0,3,3,78,4.875
 Emely Rodriguez,Iowa,86,6,43,12,10,1,4,1,76,12.666666666666666
 Rachael Okokoh,Penn State,109,18,26,27,2,6,4,0,75,4.166666666666667
 Emily Fisher,Nebraska,91,12,20,21,8,2,8,0,69,5.75
 Kennedy Klick,Minnesota,94,12,27,12,16,0,5,2,67,5.583333333333333
-Angelina Hodgens,Northwestern,97,14,27,15,6,0,6,3,63,4.5
 Lea Bartelme,Maryland,80,4,27,12,15,0,3,3,63,15.75
+Angelina Hodgens,Northwestern,97,14,27,15,6,0,6,3,63,4.5
 Sara Sambolic,Michigan State,108,11,30,16,3,0,4,3,60,5.454545454545454
 Irene Noya Catoira,Illinois,76,11,21,18,4,3,5,0,59,5.363636363636363
 Claire Keswick,Northwestern,131,16,29,2,9,1,2,9,55,3.4375
 Olivia Anderson,Washington,44,8,17,11,2,10,2,1,55,6.875
 Ally VanTimmeren,Michigan,74,14,26,18,4,2,1,0,54,3.857142857142857
 Callie Levin,Iowa,80,11,19,11,7,0,5,1,48,4.363636363636363
-Elisa Mevius,Oregon,44,2,25,3,6,1,5,1,47,23.5
 Yacine N'Diaye,Rutgers,101,11,12,20,3,2,4,0,47,4.2727272727272725
+Elisa Mevius,Oregon,44,2,25,3,6,1,5,1,47,23.5
 Filippa Tilliander,Oregon,77,14,12,26,3,0,2,0,45,3.2142857142857144
 Ava McKennie,Maryland,72,7,26,9,1,1,2,2,44,6.285714285714286
 Ciara Byars,Michigan,45,11,24,13,2,1,1,0,43,3.909090909090909
 Jessica Fields,Michigan,45,12,16,10,3,3,4,0,43,3.5833333333333335
 Jade Ondineme,Indiana,67,11,9,19,2,2,3,0,40,3.6363636363636362
-Rian Forestier,USC,63,9,20,6,6,0,1,5,39,4.333333333333333
 Nikki Kerstein,Wisconsin,133,15,11,7,14,0,3,1,39,2.6
+Rian Forestier,USC,63,9,20,6,6,0,1,5,39,4.333333333333333
 Shayla Gillmer,Washington,58,9,8,13,1,3,4,0,36,4.0
 Nicole Fritea,Maryland,48,9,12,11,1,4,1,1,35,3.888888888888889
 Alie Bisballe,Wisconsin,44,10,9,12,3,3,1,1,33,3.3
@@ -205,9 +205,9 @@ Sara Barhoum,Oregon,46,7,12,3,1,1,2,4,26,3.7142857142857144
 Christina Karamouzi Siegel,UCLA,49,14,10,6,2,0,2,2,24,1.7142857142857142
 Teagan Mallegni,Iowa,35,8,9,10,3,0,0,1,23,2.875
 Kat Righeimer,Northwestern,40,6,7,2,0,2,4,1,22,3.6666666666666665
-Leena Patibandla,Wisconsin,28,8,6,5,4,1,2,0,21,2.625
-Naomi Benson,Illinois,36,11,10,9,0,1,0,0,21,1.9090909090909092
 Crystal Wang,Northwestern,50,8,10,5,4,0,1,0,21,2.625
+Naomi Benson,Illinois,36,11,10,9,0,1,0,0,21,1.9090909090909092
+Leena Patibandla,Wisconsin,28,8,6,5,4,1,2,0,21,2.625
 Brynn Senden,Minnesota,39,9,8,5,4,0,1,1,20,2.2222222222222223
 Nina Cain,Washington,41,8,6,8,0,0,2,0,18,2.25
 Faith Wiseman,Indiana,34,7,3,9,1,1,1,0,17,2.4285714285714284
@@ -224,12 +224,12 @@ Taylor Woodson,Minnesota,22,2,2,4,0,0,1,0,8,4.0
 Kennise Johnson,Iowa,18,5,2,3,3,0,0,0,8,1.6
 Carley Barrett,Purdue,7,5,5,0,0,0,1,1,8,1.6
 Tracey Bershers,Minnesota,14,2,4,1,2,0,0,0,7,3.5
-Mia Zenere,Illinois,18,4,4,2,1,0,0,0,7,1.75
 Zoey Bershers,Minnesota,13,5,3,3,0,0,0,1,7,1.4
+Mia Zenere,Illinois,18,4,4,2,1,0,0,0,7,1.75
 Gisela Segura,Illinois,17,5,3,3,0,0,0,0,6,1.2
 Sammie Wagner,Oregon,7,2,0,1,1,1,0,0,4,2.0
-Alba Martín Mesa,Wisconsin,16,9,0,1,0,1,0,0,3,0.3333333333333333
 Sandra Moreno,Northwestern,9,4,0,3,0,0,0,0,3,0.75
+Alba Martín Mesa,Wisconsin,16,9,0,1,0,1,0,0,3,0.3333333333333333
 Reese Jaramillo,Wisconsin,5,6,2,0,0,0,0,0,2,0.3333333333333333
 Aaiyanna Dunbar,Michigan,10,6,0,0,0,0,1,0,2,0.3333333333333333
 Rachel Mutombo,Northwestern,10,5,0,1,0,0,0,0,1,0.2
