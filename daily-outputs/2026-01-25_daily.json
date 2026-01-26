@@ -539,10 +539,10 @@
     "daily_points":3
   },
   {
-    "name":"Bryn Martin",
+    "name":"T'yana Todd",
     "team":"Ohio State",
-    "fantasy_points":228,
-    "past_points":226,
+    "fantasy_points":197,
+    "past_points":195,
     "daily_points":2
   },
   {
@@ -553,10 +553,10 @@
     "daily_points":2
   },
   {
-    "name":"T'yana Todd",
+    "name":"Bryn Martin",
     "team":"Ohio State",
-    "fantasy_points":197,
-    "past_points":195,
+    "fantasy_points":228,
+    "past_points":226,
     "daily_points":2
   },
   {
@@ -658,8 +658,8 @@
     "daily_points":0
   },
   {
-    "name":"Sayvia Sellers",
-    "team":"Washington",
+    "name":"Mia Jacobs",
+    "team":"Oregon",
     "fantasy_points":603,
     "past_points":603,
     "daily_points":0
@@ -700,8 +700,8 @@
     "daily_points":0
   },
   {
-    "name":"Mia Jacobs",
-    "team":"Oregon",
+    "name":"Sayvia Sellers",
+    "team":"Washington",
     "fantasy_points":603,
     "past_points":603,
     "daily_points":0
@@ -952,8 +952,8 @@
     "daily_points":0
   },
   {
-    "name":"Shaelyn Steele",
-    "team":"Penn State",
+    "name":"Astera Tuhina",
+    "team":"Oregon",
     "fantasy_points":204,
     "past_points":204,
     "daily_points":0
@@ -966,10 +966,10 @@
     "daily_points":0
   },
   {
-    "name":"Hailey Weaver",
-    "team":"Nebraska",
-    "fantasy_points":211,
-    "past_points":211,
+    "name":"Marya Boiko",
+    "team":"Maryland",
+    "fantasy_points":231,
+    "past_points":231,
     "daily_points":0
   },
   {
@@ -1162,8 +1162,8 @@
     "daily_points":0
   },
   {
-    "name":"Astera Tuhina",
-    "team":"Oregon",
+    "name":"Shaelyn Steele",
+    "team":"Penn State",
     "fantasy_points":204,
     "past_points":204,
     "daily_points":0
@@ -1176,13 +1176,6 @@
     "daily_points":0
   },
   {
-    "name":"Isaline Alexander",
-    "team":"Michigan State",
-    "fantasy_points":228,
-    "past_points":228,
-    "daily_points":0
-  },
-  {
     "name":"Amina Muhammad",
     "team":"Oregon",
     "fantasy_points":226,
@@ -1190,10 +1183,17 @@
     "daily_points":0
   },
   {
-    "name":"Marya Boiko",
-    "team":"Maryland",
-    "fantasy_points":231,
-    "past_points":231,
+    "name":"Hailey Weaver",
+    "team":"Nebraska",
+    "fantasy_points":211,
+    "past_points":211,
+    "daily_points":0
+  },
+  {
+    "name":"Isaline Alexander",
+    "team":"Michigan State",
+    "fantasy_points":228,
+    "past_points":228,
     "daily_points":0
   },
   {
@@ -1344,14 +1344,14 @@
     "daily_points":0
   },
   {
-    "name":"Ciara Byars",
+    "name":"Jessica Fields",
     "team":"Michigan",
     "fantasy_points":43,
     "past_points":43,
     "daily_points":0
   },
   {
-    "name":"Jessica Fields",
+    "name":"Ciara Byars",
     "team":"Michigan",
     "fantasy_points":43,
     "past_points":43,
@@ -1449,15 +1449,15 @@
     "daily_points":0
   },
   {
-    "name":"Crystal Wang",
-    "team":"Northwestern",
+    "name":"Leena Patibandla",
+    "team":"Wisconsin",
     "fantasy_points":21,
     "past_points":21,
     "daily_points":0
   },
   {
-    "name":"Leena Patibandla",
-    "team":"Wisconsin",
+    "name":"Crystal Wang",
+    "team":"Northwestern",
     "fantasy_points":21,
     "past_points":21,
     "daily_points":0
@@ -1561,15 +1561,15 @@
     "daily_points":0
   },
   {
-    "name":"Taylor Woodson",
-    "team":"Minnesota",
+    "name":"Carley Barrett",
+    "team":"Purdue",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
   },
   {
-    "name":"Carley Barrett",
-    "team":"Purdue",
+    "name":"Taylor Woodson",
+    "team":"Minnesota",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1589,15 +1589,15 @@
     "daily_points":0
   },
   {
-    "name":"Tracey Bershers",
-    "team":"Minnesota",
+    "name":"Mia Zenere",
+    "team":"Illinois",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
   },
   {
-    "name":"Mia Zenere",
-    "team":"Illinois",
+    "name":"Tracey Bershers",
+    "team":"Minnesota",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
