@@ -546,8 +546,8 @@
     "daily_points":2
   },
   {
-    "name":"Chloe Briggs",
-    "team":"Washington",
+    "name":"DaiJa Turner",
+    "team":"Northwestern",
     "fantasy_points":94,
     "past_points":92,
     "daily_points":2
@@ -560,8 +560,8 @@
     "daily_points":2
   },
   {
-    "name":"DaiJa Turner",
-    "team":"Northwestern",
+    "name":"Chloe Briggs",
+    "team":"Washington",
     "fantasy_points":94,
     "past_points":92,
     "daily_points":2
@@ -1008,8 +1008,8 @@
     "daily_points":0
   },
   {
-    "name":"Lily Krahn",
-    "team":"Wisconsin",
+    "name":"Sienna Harvey",
+    "team":"Washington",
     "fantasy_points":170,
     "past_points":170,
     "daily_points":0
@@ -1029,8 +1029,8 @@
     "daily_points":0
   },
   {
-    "name":"Layla Hays",
-    "team":"Iowa",
+    "name":"Aaliyah Guyton",
+    "team":"Illinois",
     "fantasy_points":195,
     "past_points":195,
     "daily_points":0
@@ -1043,8 +1043,8 @@
     "daily_points":0
   },
   {
-    "name":"Aaliyah Guyton",
-    "team":"Illinois",
+    "name":"Layla Hays",
+    "team":"Iowa",
     "fantasy_points":195,
     "past_points":195,
     "daily_points":0
@@ -1134,8 +1134,8 @@
     "daily_points":0
   },
   {
-    "name":"Sienna Harvey",
-    "team":"Washington",
+    "name":"Lily Krahn",
+    "team":"Wisconsin",
     "fantasy_points":170,
     "past_points":170,
     "daily_points":0
@@ -1169,8 +1169,8 @@
     "daily_points":0
   },
   {
-    "name":"Bryn Martin",
-    "team":"Ohio State",
+    "name":"Isaline Alexander",
+    "team":"Michigan State",
     "fantasy_points":228,
     "past_points":228,
     "daily_points":0
@@ -1183,8 +1183,8 @@
     "daily_points":0
   },
   {
-    "name":"Isaline Alexander",
-    "team":"Michigan State",
+    "name":"Bryn Martin",
+    "team":"Ohio State",
     "fantasy_points":228,
     "past_points":228,
     "daily_points":0
@@ -1351,13 +1351,6 @@
     "daily_points":0
   },
   {
-    "name":"Yacine N'Diaye",
-    "team":"Rutgers",
-    "fantasy_points":47,
-    "past_points":47,
-    "daily_points":0
-  },
-  {
     "name":"Elisa Mevius",
     "team":"Oregon",
     "fantasy_points":47,
@@ -1365,8 +1358,15 @@
     "daily_points":0
   },
   {
-    "name":"Rian Forestier",
-    "team":"USC",
+    "name":"Yacine N'Diaye",
+    "team":"Rutgers",
+    "fantasy_points":47,
+    "past_points":47,
+    "daily_points":0
+  },
+  {
+    "name":"Nikki Kerstein",
+    "team":"Wisconsin",
     "fantasy_points":39,
     "past_points":39,
     "daily_points":0
@@ -1379,8 +1379,8 @@
     "daily_points":0
   },
   {
-    "name":"Nikki Kerstein",
-    "team":"Wisconsin",
+    "name":"Rian Forestier",
+    "team":"USC",
     "fantasy_points":39,
     "past_points":39,
     "daily_points":0
@@ -1470,8 +1470,8 @@
     "daily_points":0
   },
   {
-    "name":"Teagan Mallegni",
-    "team":"Iowa",
+    "name":"Anna Terrian",
+    "team":"Michigan State",
     "fantasy_points":27,
     "past_points":27,
     "daily_points":0
@@ -1526,8 +1526,8 @@
     "daily_points":0
   },
   {
-    "name":"Anna Terrian",
-    "team":"Michigan State",
+    "name":"Teagan Mallegni",
+    "team":"Iowa",
     "fantasy_points":27,
     "past_points":27,
     "daily_points":0
@@ -1554,8 +1554,8 @@
     "daily_points":0
   },
   {
-    "name":"Kennise Johnson",
-    "team":"Iowa",
+    "name":"Taylor Woodson",
+    "team":"Minnesota",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1568,15 +1568,15 @@
     "daily_points":0
   },
   {
-    "name":"Taylor Woodson",
-    "team":"Minnesota",
+    "name":"Sammie Wagner",
+    "team":"Oregon",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
   },
   {
-    "name":"Sammie Wagner",
-    "team":"Oregon",
+    "name":"Kennise Johnson",
+    "team":"Iowa",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1617,15 +1617,15 @@
     "daily_points":0
   },
   {
-    "name":"Reese Jaramillo",
-    "team":"Wisconsin",
+    "name":"Aaiyanna Dunbar",
+    "team":"Michigan",
     "fantasy_points":2,
     "past_points":2,
     "daily_points":0
   },
   {
-    "name":"Aaiyanna Dunbar",
-    "team":"Michigan",
+    "name":"Reese Jaramillo",
+    "team":"Wisconsin",
     "fantasy_points":2,
     "past_points":2,
     "daily_points":0
