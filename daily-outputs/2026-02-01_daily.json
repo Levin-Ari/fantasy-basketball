@@ -833,17 +833,17 @@
     "daily_points":1
   },
   {
-    "name":"Brynn Senden",
-    "team":"Minnesota",
-    "fantasy_points":21,
-    "past_points":20,
-    "daily_points":1
-  },
-  {
     "name":"Kennedy Brandt",
     "team":"Rutgers",
     "fantasy_points":18,
     "past_points":17,
+    "daily_points":1
+  },
+  {
+    "name":"Brynn Senden",
+    "team":"Minnesota",
+    "fantasy_points":21,
+    "past_points":20,
     "daily_points":1
   },
   {
@@ -1078,8 +1078,8 @@
     "daily_points":0
   },
   {
-    "name":"Lily Krahn",
-    "team":"Wisconsin",
+    "name":"Marah Dykstra",
+    "team":"Michigan State",
     "fantasy_points":178,
     "past_points":178,
     "daily_points":0
@@ -1127,8 +1127,8 @@
     "daily_points":0
   },
   {
-    "name":"Marah Dykstra",
-    "team":"Michigan State",
+    "name":"Lily Krahn",
+    "team":"Wisconsin",
     "fantasy_points":178,
     "past_points":178,
     "daily_points":0
@@ -1197,15 +1197,15 @@
     "daily_points":0
   },
   {
-    "name":"Amy Terrian",
-    "team":"Michigan State",
+    "name":"Jovana Spasovski",
+    "team":"Wisconsin",
     "fantasy_points":97,
     "past_points":97,
     "daily_points":0
   },
   {
-    "name":"Jovana Spasovski",
-    "team":"Wisconsin",
+    "name":"Amy Terrian",
+    "team":"Michigan State",
     "fantasy_points":97,
     "past_points":97,
     "daily_points":0
@@ -1281,8 +1281,8 @@
     "daily_points":0
   },
   {
-    "name":"Lea Bartelme",
-    "team":"Maryland",
+    "name":"Sara Sambolic",
+    "team":"Michigan State",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1337,8 +1337,8 @@
     "daily_points":0
   },
   {
-    "name":"Elisa Mevius",
-    "team":"Oregon",
+    "name":"Yacine N'Diaye",
+    "team":"Rutgers",
     "fantasy_points":47,
     "past_points":47,
     "daily_points":0
@@ -1351,8 +1351,8 @@
     "daily_points":0
   },
   {
-    "name":"Yacine N'Diaye",
-    "team":"Rutgers",
+    "name":"Elisa Mevius",
+    "team":"Oregon",
     "fantasy_points":47,
     "past_points":47,
     "daily_points":0
@@ -1372,8 +1372,8 @@
     "daily_points":0
   },
   {
-    "name":"Sara Sambolic",
-    "team":"Michigan State",
+    "name":"Lea Bartelme",
+    "team":"Maryland",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1421,15 +1421,15 @@
     "daily_points":0
   },
   {
-    "name":"Alie Bisballe",
-    "team":"Wisconsin",
+    "name":"Kat Righeimer",
+    "team":"Northwestern",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
   },
   {
-    "name":"Kat Righeimer",
-    "team":"Northwestern",
+    "name":"Alie Bisballe",
+    "team":"Wisconsin",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
@@ -1456,14 +1456,14 @@
     "daily_points":0
   },
   {
-    "name":"Ciara Byars",
+    "name":"Jessica Fields",
     "team":"Michigan",
     "fantasy_points":45,
     "past_points":45,
     "daily_points":0
   },
   {
-    "name":"Jessica Fields",
+    "name":"Ciara Byars",
     "team":"Michigan",
     "fantasy_points":45,
     "past_points":45,
@@ -1477,6 +1477,13 @@
     "daily_points":0
   },
   {
+    "name":"Makylah Moore",
+    "team":"Rutgers",
+    "fantasy_points":21,
+    "past_points":21,
+    "daily_points":0
+  },
+  {
     "name":"Christina Karamouzi Siegel",
     "team":"UCLA",
     "fantasy_points":24,
@@ -1484,17 +1491,10 @@
     "daily_points":0
   },
   {
-    "name":"Sara Barhoum",
-    "team":"Oregon",
-    "fantasy_points":28,
-    "past_points":28,
-    "daily_points":0
-  },
-  {
-    "name":"Makylah Moore",
-    "team":"Rutgers",
-    "fantasy_points":21,
-    "past_points":21,
+    "name":"Anna Terrian",
+    "team":"Michigan State",
+    "fantasy_points":27,
+    "past_points":27,
     "daily_points":0
   },
   {
@@ -1526,10 +1526,10 @@
     "daily_points":0
   },
   {
-    "name":"Anna Terrian",
-    "team":"Michigan State",
-    "fantasy_points":27,
-    "past_points":27,
+    "name":"Sara Barhoum",
+    "team":"Oregon",
+    "fantasy_points":28,
+    "past_points":28,
     "daily_points":0
   },
   {
@@ -1540,15 +1540,15 @@
     "daily_points":0
   },
   {
-    "name":"Hayven Smith",
-    "team":"Illinois",
+    "name":"Megan Grant",
+    "team":"UCLA",
     "fantasy_points":11,
     "past_points":11,
     "daily_points":0
   },
   {
-    "name":"Megan Grant",
-    "team":"UCLA",
+    "name":"Hayven Smith",
+    "team":"Illinois",
     "fantasy_points":11,
     "past_points":11,
     "daily_points":0
