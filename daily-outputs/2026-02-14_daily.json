@@ -553,8 +553,8 @@
     "daily_points":0
   },
   {
-    "name":"Casey Harter",
-    "team":"Northwestern",
+    "name":"Ashley Sofilkanich",
+    "team":"Michigan",
     "fantasy_points":408,
     "past_points":408,
     "daily_points":0
@@ -630,8 +630,8 @@
     "daily_points":0
   },
   {
-    "name":"Ashley Sofilkanich",
-    "team":"Michigan",
+    "name":"Casey Harter",
+    "team":"Northwestern",
     "fantasy_points":408,
     "past_points":408,
     "daily_points":0
@@ -959,14 +959,14 @@
     "daily_points":0
   },
   {
-    "name":"Shay Bollin",
+    "name":"Breauna Ware",
     "team":"Wisconsin",
     "fantasy_points":259,
     "past_points":259,
     "daily_points":0
   },
   {
-    "name":"Breauna Ware",
+    "name":"Shay Bollin",
     "team":"Wisconsin",
     "fantasy_points":259,
     "past_points":259,
@@ -994,8 +994,8 @@
     "daily_points":0
   },
   {
-    "name":"Makena Christian",
-    "team":"Minnesota",
+    "name":"Kennadi Williams",
+    "team":"Nebraska",
     "fantasy_points":184,
     "past_points":184,
     "daily_points":0
@@ -1022,22 +1022,22 @@
     "daily_points":0
   },
   {
-    "name":"Kennadi Williams",
-    "team":"Nebraska",
+    "name":"Makena Christian",
+    "team":"Minnesota",
     "fantasy_points":184,
     "past_points":184,
     "daily_points":0
   },
   {
-    "name":"Jerni Kiaku",
-    "team":"Indiana",
+    "name":"Lena Bilic",
+    "team":"UCLA",
     "fantasy_points":162,
     "past_points":162,
     "daily_points":0
   },
   {
-    "name":"Lena Bilic",
-    "team":"UCLA",
+    "name":"Jerni Kiaku",
+    "team":"Indiana",
     "fantasy_points":162,
     "past_points":162,
     "daily_points":0
@@ -1260,6 +1260,13 @@
     "daily_points":0
   },
   {
+    "name":"Ally VanTimmeren",
+    "team":"Michigan",
+    "fantasy_points":63,
+    "past_points":63,
+    "daily_points":0
+  },
+  {
     "name":"Angelina Hodgens",
     "team":"Northwestern",
     "fantasy_points":63,
@@ -1269,13 +1276,6 @@
   {
     "name":"Lea Bartelme",
     "team":"Maryland",
-    "fantasy_points":63,
-    "past_points":63,
-    "daily_points":0
-  },
-  {
-    "name":"Ally VanTimmeren",
-    "team":"Michigan",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1295,8 +1295,8 @@
     "daily_points":0
   },
   {
-    "name":"Claire Keswick",
-    "team":"Northwestern",
+    "name":"Olivia Anderson",
+    "team":"Washington",
     "fantasy_points":55,
     "past_points":55,
     "daily_points":0
@@ -1309,8 +1309,8 @@
     "daily_points":0
   },
   {
-    "name":"Olivia Anderson",
-    "team":"Washington",
+    "name":"Claire Keswick",
+    "team":"Northwestern",
     "fantasy_points":55,
     "past_points":55,
     "daily_points":0
@@ -1533,13 +1533,6 @@
     "daily_points":0
   },
   {
-    "name":"Hayven Smith",
-    "team":"Illinois",
-    "fantasy_points":11,
-    "past_points":11,
-    "daily_points":0
-  },
-  {
     "name":"Megan Grant",
     "team":"UCLA",
     "fantasy_points":11,
@@ -1554,22 +1547,22 @@
     "daily_points":0
   },
   {
-    "name":"Carley Barrett",
-    "team":"Purdue",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
-    "name":"Gisela Segura",
+    "name":"Hayven Smith",
     "team":"Illinois",
-    "fantasy_points":8,
-    "past_points":8,
+    "fantasy_points":11,
+    "past_points":11,
     "daily_points":0
   },
   {
     "name":"Sammie Wagner",
     "team":"Oregon",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Carley Barrett",
+    "team":"Purdue",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1589,8 +1582,15 @@
     "daily_points":0
   },
   {
-    "name":"Sandra Moreno",
-    "team":"Northwestern",
+    "name":"Gisela Segura",
+    "team":"Illinois",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Tracey Bershers",
+    "team":"Minnesota",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
@@ -1603,8 +1603,8 @@
     "daily_points":0
   },
   {
-    "name":"Tracey Bershers",
-    "team":"Minnesota",
+    "name":"Sandra Moreno",
+    "team":"Northwestern",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
