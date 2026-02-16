@@ -8,7 +8,7 @@ async function fetchAndProcessData() {
     try {
         const[teamsResponse, apiResponse] = await Promise.all([
             fetch('entries.json'),
-            fetch('https://engage-api.boostsport.ai/api/sport/wbb/stats/table?split=all&level=season&teams=all&category=player&section=totals&conference=Big%20Ten&seasons=2025&view=table&type=player&limit=1000&orderBy=default_rank&order=asc')
+            fetch('https://engage-api.boostsport.ai/api/sport/wbb/stats/table?split=all&level=season&teams=all&category=player&section=totals&conference=Big%20Ten&seasons=2025&view=table&type=player&limit=5000&orderBy=default_rank&order=asc&qualifier=default_qualifier')
         ]);
 
         const teamsData = await teamsResponse.json();

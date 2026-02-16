@@ -25,7 +25,7 @@ params = {
     'limit': '5000',
     'orderBy': 'default_rank',
     'order': 'asc',
-    'qualifier' : 'default_qualifier'
+    'qualifier' : 'default_qualifier',
 }
 
 response = requests.get('https://engage-api.boostsport.ai/api/sport/wbb/stats/table', params=params)
