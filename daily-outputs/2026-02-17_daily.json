@@ -511,15 +511,15 @@
     "daily_points":0
   },
   {
-    "name":"Nevaeh Caffey",
-    "team":"Indiana",
+    "name":"Brynn McGaughy",
+    "team":"Washington",
     "fantasy_points":444,
     "past_points":444,
     "daily_points":0
   },
   {
-    "name":"Brynn McGaughy",
-    "team":"Washington",
+    "name":"Nevaeh Caffey",
+    "team":"Indiana",
     "fantasy_points":444,
     "past_points":444,
     "daily_points":0
@@ -889,6 +889,13 @@
     "daily_points":0
   },
   {
+    "name":"Juliann Woodard",
+    "team":"Michigan State",
+    "fantasy_points":223,
+    "past_points":223,
+    "daily_points":0
+  },
+  {
     "name":"Nyla McFadden",
     "team":"Penn State",
     "fantasy_points":223,
@@ -898,13 +905,6 @@
   {
     "name":"Astera Tuhina",
     "team":"Oregon",
-    "fantasy_points":223,
-    "past_points":223,
-    "daily_points":0
-  },
-  {
-    "name":"Juliann Woodard",
-    "team":"Michigan State",
     "fantasy_points":223,
     "past_points":223,
     "daily_points":0
@@ -1414,15 +1414,15 @@
     "daily_points":0
   },
   {
-    "name":"Teagan Mallegni",
-    "team":"Iowa",
+    "name":"Faith Wiseman",
+    "team":"Indiana",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
   },
   {
-    "name":"Faith Wiseman",
-    "team":"Indiana",
+    "name":"Teagan Mallegni",
+    "team":"Iowa",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
@@ -1449,6 +1449,13 @@
     "daily_points":0
   },
   {
+    "name":"Crystal Wang",
+    "team":"Northwestern",
+    "fantasy_points":25,
+    "past_points":25,
+    "daily_points":0
+  },
+  {
     "name":"Amparo L\u00f3pez",
     "team":"Northwestern",
     "fantasy_points":25,
@@ -1458,13 +1465,6 @@
   {
     "name":"Christina Karamouzi Siegel",
     "team":"UCLA",
-    "fantasy_points":25,
-    "past_points":25,
-    "daily_points":0
-  },
-  {
-    "name":"Crystal Wang",
-    "team":"Northwestern",
     "fantasy_points":25,
     "past_points":25,
     "daily_points":0
@@ -1568,8 +1568,8 @@
     "daily_points":0
   },
   {
-    "name":"Kennise Johnson",
-    "team":"Iowa",
+    "name":"Taylor Woodson",
+    "team":"Minnesota",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1582,8 +1582,8 @@
     "daily_points":0
   },
   {
-    "name":"Taylor Woodson",
-    "team":"Minnesota",
+    "name":"Kennise Johnson",
+    "team":"Iowa",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
