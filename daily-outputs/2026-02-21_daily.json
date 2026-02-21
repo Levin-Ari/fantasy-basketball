@@ -336,15 +336,15 @@
     "daily_points":0
   },
   {
-    "name":"Tayla Thomas",
-    "team":"Northwestern",
+    "name":"Destiny Jackson",
+    "team":"Illinois",
     "fantasy_points":569,
     "past_points":569,
     "daily_points":0
   },
   {
-    "name":"Destiny Jackson",
-    "team":"Illinois",
+    "name":"Tayla Thomas",
+    "team":"Northwestern",
     "fantasy_points":569,
     "past_points":569,
     "daily_points":0
@@ -1267,8 +1267,8 @@
     "daily_points":0
   },
   {
-    "name":"Angelina Hodgens",
-    "team":"Northwestern",
+    "name":"Lea Bartelme",
+    "team":"Maryland",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1281,8 +1281,8 @@
     "daily_points":0
   },
   {
-    "name":"Lea Bartelme",
-    "team":"Maryland",
+    "name":"Angelina Hodgens",
+    "team":"Northwestern",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1435,15 +1435,15 @@
     "daily_points":0
   },
   {
-    "name":"Faith Wiseman",
-    "team":"Indiana",
+    "name":"Kennedy Brandt",
+    "team":"Rutgers",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
   },
   {
-    "name":"Kennedy Brandt",
-    "team":"Rutgers",
+    "name":"Faith Wiseman",
+    "team":"Indiana",
     "fantasy_points":33,
     "past_points":33,
     "daily_points":0
@@ -1561,6 +1561,13 @@
     "daily_points":0
   },
   {
+    "name":"Kennise Johnson",
+    "team":"Iowa",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
     "name":"Sammie Wagner",
     "team":"Oregon",
     "fantasy_points":8,
@@ -1575,24 +1582,10 @@
     "daily_points":0
   },
   {
-    "name":"Kennise Johnson",
-    "team":"Iowa",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
     "name":"Gisela Segura",
     "team":"Illinois",
     "fantasy_points":8,
     "past_points":8,
-    "daily_points":0
-  },
-  {
-    "name":"Sandra Moreno",
-    "team":"Northwestern",
-    "fantasy_points":7,
-    "past_points":7,
     "daily_points":0
   },
   {
@@ -1605,6 +1598,13 @@
   {
     "name":"Tracey Bershers",
     "team":"Minnesota",
+    "fantasy_points":7,
+    "past_points":7,
+    "daily_points":0
+  },
+  {
+    "name":"Sandra Moreno",
+    "team":"Northwestern",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
