@@ -1267,8 +1267,8 @@
     "daily_points":0
   },
   {
-    "name":"Lea Bartelme",
-    "team":"Maryland",
+    "name":"Angelina Hodgens",
+    "team":"Northwestern",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1288,8 +1288,8 @@
     "daily_points":0
   },
   {
-    "name":"Angelina Hodgens",
-    "team":"Northwestern",
+    "name":"Lea Bartelme",
+    "team":"Maryland",
     "fantasy_points":63,
     "past_points":63,
     "daily_points":0
@@ -1554,22 +1554,8 @@
     "daily_points":0
   },
   {
-    "name":"Carley Barrett",
-    "team":"Purdue",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
     "name":"Gisela Segura",
     "team":"Illinois",
-    "fantasy_points":8,
-    "past_points":8,
-    "daily_points":0
-  },
-  {
-    "name":"Kennise Johnson",
-    "team":"Iowa",
     "fantasy_points":8,
     "past_points":8,
     "daily_points":0
@@ -1589,8 +1575,22 @@
     "daily_points":0
   },
   {
-    "name":"Mia Zenere",
-    "team":"Illinois",
+    "name":"Kennise Johnson",
+    "team":"Iowa",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Carley Barrett",
+    "team":"Purdue",
+    "fantasy_points":8,
+    "past_points":8,
+    "daily_points":0
+  },
+  {
+    "name":"Sandra Moreno",
+    "team":"Northwestern",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
@@ -1603,8 +1603,8 @@
     "daily_points":0
   },
   {
-    "name":"Sandra Moreno",
-    "team":"Northwestern",
+    "name":"Mia Zenere",
+    "team":"Illinois",
     "fantasy_points":7,
     "past_points":7,
     "daily_points":0
