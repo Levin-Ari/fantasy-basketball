@@ -131,8 +131,8 @@ async function loadYesterdayData() {
         const year = yesterday.getFullYear();
         const month = String(yesterday.getMonth() + 1).padStart(2, '0');
         const day = String(yesterday.getDate()).padStart(2, '0');
-        const filename = `daily-outputs/${year}-${month}-${day}_daily.json`
-
+        // const filename = `daily-outputs/${year}-${month}-${day}_daily.json`
+        const filename = 'daily-outputs/2026-04-05_daily.json'
         const response = await fetch(filename)
 
         if (!response.ok) {
@@ -149,7 +149,8 @@ async function loadYesterdayData() {
             month: 'long',
             day: 'numeric',
         });
-        document.getElementById('yesterday-date').textContent = dateStr;
+        // document.getElementById('yesterday-date').textContent = dateStr;
+        document.getElementById('yesterday-date').textContent = 'Sunday, April 5, 2026 (Championship Game)';
 
     } catch (error) {
         console.error('Error loading yesterday data:', error);
