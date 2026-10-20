@@ -36,6 +36,38 @@ body {
     opacity: 0.9;
 }
 
+.season-toggle {
+    display: inline-flex;
+    gap: 4px;
+    margin: 10px 0 12px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    background: rgba(73, 37, 6, 0.35);
+}
+
+.season-button {
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: white;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.season-button:hover,
+.season-button:focus-visible {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.season-button.is-active {
+    background: white;
+    color: #492506;
+}
+
 .loading {
     text-align: center;
     color: white;

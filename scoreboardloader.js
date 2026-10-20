@@ -2,14 +2,23 @@ let teamsData = [];
 let playersData = [];
 let yesterdayPlayersData = [];
 let positionCategories = {};
+let seasonLoadId = 0;
+let tableSortingInitialized = false;
+const tableSortStates = new Map();
 
-//Load data and populate tables
-async function fetchAndProcessData() {
+async function fetchAndProcessData(seasonYear) {
     try {
         const[teamsResponse, apiResponse] = await Promise.all([
             fetch('entries.json'),
-            fetch('https://engage-api.boostsport.ai/api/sport/wbb/stats/table?split=all&level=season&teams=all&category=player&section=totals&conference=Big%20Ten&seasons=2025&view=table&type=player&limit=5000&orderBy=default_rank&order=asc&qualifier=default_qualifier')
+            fetch(`https://engage-api.boostsport.ai/api/sport/wbb/stats/table?split=all&level=season&teams=all&category=player&section=totals&conference=Big%20Ten&seasons=${seasonYear}&view=table&type=player&limit=5000&orderBy=default_rank&order=asc&qualifier=default_qualifier`)
         ]);
+
+        if (!teamsResponse.ok) {
+            throw new Error(`Entries request failed (HTTP ${teamsResponse.status})`);
+        }
+        if (!apiResponse.ok) {
+            throw new Error(`Stats API request failed (HTTP ${apiResponse.status})`);
+        }
 
         const teamsData = await teamsResponse.json();
 
@@ -55,35 +64,7 @@ async function fetchAndProcessData() {
             player.rank = i + 1;
         });
 
-        const getPoints = (playerName) => {
-            const player = uniquePlayers.find(p => p.name === playerName);
-            return player ? player.fantasy_points : 0;
-        };
-
-        teamsData.forEach(team => {
-            team.p1_points = getPoints(team.p1);
-            team.p2_points = getPoints(team.p2);
-            team.p3_points = getPoints(team.p3);
-            team.p4_points = getPoints(team.p4);
-            team.p5_points = getPoints(team.p5);
-            team.p6_points = getPoints(team.p6);
-            team.p7_points = getPoints(team.p7);
-            team.p8_points = getPoints(team.p8);
-            team.p9_points = getPoints(team.p9);
-            team.p10_points = getPoints(team.p10);
-
-            team.total_score = 
-                team.p1_points + team.p2_points + team.p3_points + team.p4_points + team.p5_points + team.p6_points + team.p7_points + team.p8_points + team.p9_points + team.p10_points;
-        })
-
-        teamsData.sort((a, b) => b.total_score - a.total_score);
-        
-        teamsData.forEach((team, i) => {
-            team.rank = i + 1;
-        });
-
-        return {teams: teamsData, players: uniquePlayers}
-
+        return {teams: scoreTeams(teamsData, uniquePlayers), players: uniquePlayers};
 
     } catch(error) {
         console.error('Error fetching data:', error);
@@ -91,34 +72,172 @@ async function fetchAndProcessData() {
     }
 }
 
-async function loadData(){
+function scoreTeams(teams, players) {
+    const pointsByPlayer = new Map(players.map(player => [player.name, player.fantasy_points]));
+
+    teams.forEach(team => {
+        for (let pick = 1; pick <= 10; pick++) {
+            team[`p${pick}_points`] = pointsByPlayer.get(team[`p${pick}`]) || 0;
+        }
+        team.total_score = Array.from({length: 10}, (_, index) => team[`p${index + 1}_points`])
+            .reduce((total, points) => total + points, 0);
+    });
+
+    teams.sort((a, b) => b.total_score - a.total_score);
+    teams.forEach((team, index) => {
+        team.rank = index + 1;
+    });
+    return teams;
+}
+
+function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let field = '';
+    let quoted = false;
+
+    for (let index = 0; index < text.length; index++) {
+        const character = text[index];
+        if (character === '"') {
+            if (quoted && text[index + 1] === '"') {
+                field += '"';
+                index++;
+            } else {
+                quoted = !quoted;
+            }
+        } else if (character === ',' && !quoted) {
+            row.push(field);
+            field = '';
+        } else if ((character === '\n' || character === '\r') && !quoted) {
+            if (character === '\r' && text[index + 1] === '\n') index++;
+            row.push(field);
+            if (row.some(value => value !== '')) rows.push(row);
+            row = [];
+            field = '';
+        } else {
+            field += character;
+        }
+    }
+
+    if (field !== '' || row.length > 0) {
+        row.push(field);
+        rows.push(row);
+    }
+
+    const [headers, ...dataRows] = rows;
+    if (!headers) throw new Error('Final player CSV is empty');
+    return dataRows.map(values => Object.fromEntries(
+        headers.map((header, index) => [header, values[index] || ''])
+    ));
+}
+
+async function loadArchivedSeasonData() {
+    const [entriesResponse, categoriesResponse, playersResponse, yesterdayResponse] = await Promise.all([
+        fetch('entries.json'),
+        fetch('categories.json'),
+        fetch('daily-outputs/2026-04-06.csv'),
+        fetch('daily-outputs/2026-04-05_daily.json')
+    ]);
+    const responses = [entriesResponse, categoriesResponse, playersResponse, yesterdayResponse];
+    const filenames = ['entries.json', 'categories.json', 'daily-outputs/2026-04-06.csv', 'daily-outputs/2026-04-05_daily.json'];
+    responses.forEach((response, index) => {
+        if (!response.ok) throw new Error(`${filenames[index]} request failed (HTTP ${response.status})`);
+    });
+
+    const [teams, categories, playersCsv, yesterdayPlayers] = await Promise.all([
+        entriesResponse.json(),
+        categoriesResponse.json(),
+        playersResponse.text(),
+        yesterdayResponse.json()
+    ]);
+    const players = parseCsv(playersCsv)
+        .filter(player => player.name !== 'DoNot Use')
+        .map(player => ({
+            name: player.name,
+            team: player.team,
+            minutes: Number(player.minutes),
+            games: Number(player.games),
+            points: Number(player.points),
+            rebounds: Number(player.rebounds),
+            assists: Number(player.assists),
+            blocks: Number(player.blocks),
+            steals: Number(player.steals),
+            threes: Number(player.threes),
+            fantasy_points: Number(player.fantasy_points),
+            points_per_game: Number(player.fpg)
+        }))
+        .sort((a, b) => b.fantasy_points - a.fantasy_points);
+    players.forEach((player, index) => {
+        player.rank = index + 1;
+    });
+
+    return {
+        teams: scoreTeams(teams, players),
+        players,
+        categories,
+        yesterdayPlayers
+    };
+}
+
+async function loadSeason(season) {
+    const loadId = ++seasonLoadId;
+    const isArchivedSeason = season === '2025-26';
+    const seasonDescription = document.getElementById('season-description');
+    seasonDescription.textContent = isArchivedSeason ? '2025-26 Final Standings' : '2026-27 Full Season Standings';
+    document.title = `Fantasy Big Ten Basketball Standings (${season})`;
+    document.getElementById('loading').textContent = `Loading ${season} Standings...`;
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('error').style.display = 'none';
+    document.getElementById('content').style.display = 'none';
+    tableSortStates.forEach(sort => {
+        sort.column = null;
+        sort.direction = 'desc';
+    });
+    document.querySelectorAll('.full-table th.sortable').forEach(header => {
+        header.classList.remove('sort-asc', 'sort-desc');
+    });
+
     try {
-        const data = await fetchAndProcessData();
+        const data = isArchivedSeason
+            ? await loadArchivedSeasonData()
+            : await fetchAndProcessData('2026');
+        if (loadId !== seasonLoadId) return;
+
         teamsData = data.teams;
         playersData = data.players;
 
-        await loadYesterdayData();
-        await loadCategories();
+        if (isArchivedSeason) {
+            positionCategories = data.categories;
+            yesterdayPlayersData = data.yesterdayPlayers;
+            populateYesterdayPlayers(yesterdayPlayersData.slice(0, 5));
+            document.getElementById('yesterday-date').textContent = 'Sunday, April 5, 2026 (Championship Game)';
+        } else {
+            await loadYesterdayData();
+            await loadCategories();
+            if (loadId !== seasonLoadId) return;
+        }
 
-        // Populate tables
         populateTopTeams(teamsData.slice(0, 5));
         populateTopPlayers(playersData.slice(0, 10));
         populateTopByCategory();
         populateFullTeams(teamsData);
         populateFullPlayers(playersData);
 
-        setupTableSorting('teams-table', teamsData, populateFullTeams);
-        setupTableSorting('players-table', playersData, populateFullPlayers);
+        if (!tableSortingInitialized) {
+            setupTableSorting('teams-table', populateFullTeams);
+            setupTableSorting('players-table', populateFullPlayers);
+            tableSortingInitialized = true;
+        }
 
-        //Hide loading, show content
-        document.getElementById('loading').style.display = 'none'
+        document.getElementById('loading').style.display = 'none';
         document.getElementById('content').style.display = 'block';
-    
     } catch(error) {
+        if (loadId !== seasonLoadId) return;
         console.error('Error loading data:', error)
         document.getElementById('loading').style.display = 'none';
         const errorDiv = document.getElementById('error')
         errorDiv.textContent = `Error loading data: ${error.message}. Contact Ari with a bug report.`
+        errorDiv.style.display = 'block';
     }
 }
 
@@ -186,15 +305,16 @@ async function loadCategories() {
     }
 }
 
-function setupTableSorting(tableId, data, populateFunction) {
+function setupTableSorting(tableId, populateFunction) {
     const table = document.getElementById(tableId);
     const headers = table.querySelectorAll('th.sortable');
-    let currentSort = {column: null, direction: 'desc'};
+    tableSortStates.set(tableId, {column: null, direction: 'desc'});
 
     headers.forEach(header => {
         header.addEventListener('click', () => {
             const column = header.dataset.column;
             const type = header.dataset.type;
+            const currentSort = tableSortStates.get(tableId);
 
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -209,6 +329,7 @@ function setupTableSorting(tableId, data, populateFunction) {
 
             header.classList.add(currentSort.direction === 'asc' ? 'sort-asc' : 'sort-desc');
 
+            const data = tableId === 'teams-table' ? teamsData : playersData;
             const sortedData = [...data].sort((a, b) => {
                 let aVal = a[column];
                 let bVal = b[column];
@@ -240,7 +361,8 @@ function populateTopTeams(teams) {
     <tr>
         <td class="rank">${index + 1}</td>
         <td>${team.team}</td>
-        <td class="points">${team.total_score}</td>
+        <td class="points">${team.total_score.toLocaleString('en-US')}</td>
+    </tr>
     `).join('');
 }
 
@@ -306,7 +428,7 @@ function populateYesterdayPlayers(players) {
             <td>${player.name}</td>
             <td>${player.team}</td>
             <td class="points">${player.daily_points}</td>
-        <tr>
+            </tr>
     `).join('');
 }
 
@@ -361,6 +483,7 @@ function populateTopByCategory() {
                 <td>${topPlayer.name}</td>
                 <td>${topPlayer.team}</td>
                 <td class="points">${topPlayer.fantasy_points}</td>
+            </tr>
             `
         } else {
             html += `
@@ -381,4 +504,15 @@ function populateTopByCategory() {
     tbody.innerHTML = html;
 }
 
-loadData();
+document.querySelectorAll('.season-button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.season-button').forEach(seasonButton => {
+            const isSelected = seasonButton === button;
+            seasonButton.classList.toggle('is-active', isSelected);
+            seasonButton.setAttribute('aria-pressed', String(isSelected));
+        });
+        loadSeason(button.dataset.season);
+    });
+});
+
+loadSeason('2025-26');

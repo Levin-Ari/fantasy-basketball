@@ -28,13 +28,17 @@
     <meta name="twitter:description" content="Standings for the 2025-26 Dream B1G Fantasy Basketball Contest">   
     <meta name="twitter:image" content="social-preview.png">
     
-    <script src="scoreboardloader.js"></script>
+    <script src="scoreboardloader.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>🏀 Dream B1G's Fantasy Basketball 🏀</h1>
-            <p>2025-26 Full Season Standings</p>
+            <div class="season-toggle" role="group" aria-label="Choose season">
+                <button type="button" class="season-button is-active" data-season="2025-26" aria-pressed="true">2025-26</button>
+                <button type="button" class="season-button" data-season="2026-27" aria-pressed="false">2026-27</button>
+            </div>
+            <p id="season-description">2025-26 Final Standings</p>
         </div>
 
         <div id="loading" class="loading">Loading Standings...</div>
