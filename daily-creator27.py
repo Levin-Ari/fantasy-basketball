@@ -99,7 +99,8 @@ past_players_df = pd.read_csv(past_file_name)
 past_players_df = past_players_df[['name', 'team', 'fantasy_points']].rename(columns={'fantasy_points':'past_points'})
 
 # Create the daily standings
-merged_players_df = players_df[['name', 'team', 'fantasy_points']].merge(past_players_df, how='left', on=['name', 'team']).fillna(0)
+merged_players_df = players_df[['name', 'team', 'fantasy_points']].merge(past_players_df, how='left', on=['name', 'team'])
+merged_players_df['past_points'] = pd.to_numeric(merged_players_df['past_points'], errors='raise').fillna(0).astype(int)
 merged_players_df['daily_points'] = merged_players_df['fantasy_points'] - merged_players_df['past_points']
 
 # Export to the file path

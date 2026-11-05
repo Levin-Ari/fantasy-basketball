@@ -29,7 +29,7 @@ jobs:
     - name: Install all necessary packages
       run: pip install pandas requests
     - name: Updating the daily top players JSON
-      run:  python daily-creator.py
+      run: python daily-creator27.py
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
