@@ -1,20 +1,25 @@
 name,team,minutes,games,points,rebounds,assists,blocks,steals,threes,fantasy_points,fpg
 Sayvia Sellers,Washington,64,2,42,13,17,1,4,5,87,43.5
+Grace Grocholski,Minnesota,70,2,45,17,9,0,3,8,85,42.5
 Mia Pauldo,Rutgers,61,2,43,10,11,0,8,3,83,41.5
 Jaloni Cambridge,Ohio State,51,2,45,10,11,0,4,6,80,40.0
 Kennedy Blair,Michigan State,56,2,40,16,13,1,4,0,79,39.5
+Britt Prince,Nebraska,52,2,42,10,7,1,5,5,76,38.0
 Teagan Mallegni,Wisconsin,62,2,41,17,4,2,3,3,75,37.5
+Cearah Parchment,Illinois,48,2,40,15,1,4,2,4,72,36.0
 Hannah Wickstrom,Purdue,65,2,42,17,6,0,0,5,70,35.0
 Kyndall Hunter,Purdue,74,2,39,8,6,1,5,5,70,35.0
 Avery Howell,Washington,68,2,37,14,3,1,3,7,69,34.5
 Katie Fiso,Oregon,61,2,33,11,12,0,3,3,65,32.5
-Ehis Etute,Oregon,51,2,23,24,2,1,6,0,63,31.5
-Jelena Bulajic,Purdue,61,2,36,10,8,0,2,5,63,31.5
 Kennedy Cambridge,Ohio State,51,2,26,12,4,1,8,3,63,31.5
 Lily Carmody,Northwestern,61,2,41,10,7,0,2,1,63,31.5
+Ehis Etute,Oregon,51,2,23,24,2,1,6,0,63,31.5
+Jelena Bulajic,Purdue,61,2,36,10,8,0,2,5,63,31.5
+Berry Wallace,Illinois,53,2,34,16,3,1,2,3,62,31.0
 Brynn McGaughy,Washington,51,2,24,21,2,2,5,1,62,31.0
 Elsa Lemmilä,Ohio State,40,2,30,15,4,4,2,0,61,30.5
 McKenna Woliczko,Iowa,47,2,32,12,2,3,2,5,61,30.5
+Amiah Hargrove,Nebraska,44,2,32,17,3,0,2,4,60,30.0
 Dani Carnegie,Iowa,53,2,33,12,7,0,1,5,59,29.5
 Theryn Hallock,Michigan State,50,2,26,8,5,0,9,1,58,29.0
 Jasmyn Cooper-Derba,Northwestern,71,2,21,15,7,2,3,3,56,28.0
@@ -25,193 +30,189 @@ Addi Mack,Maryland,33,1,35,3,6,0,2,6,54,54.0
 Zania Socka-Nguemen,Indiana,42,2,24,19,4,3,0,0,53,26.5
 Ari Long,Oregon,62,2,21,6,4,1,7,5,52,26.0
 Kathy-Emma Otto,Michigan State,42,2,17,13,1,2,8,0,51,25.5
-Britt Prince,Nebraska,32,1,23,8,4,1,4,4,49,49.0
 Zachara Perkins,Rutgers,55,2,20,17,2,1,3,2,49,24.5
 Donovyn Hunter,UCLA,53,2,20,8,9,2,3,2,49,24.5
-Sienna Betts,UCLA,45,2,32,11,3,1,0,0,48,24.0
 Addy Nyemchek,Indiana,38,2,19,10,3,3,4,2,48,24.0
-Ava Watson,Ohio State,50,2,20,5,7,0,4,6,46,23.0
+Sienna Betts,UCLA,45,2,32,11,3,1,0,0,48,24.0
+Tayla Thomas,Minnesota,45,2,17,20,0,2,3,0,47,23.5
+Destiny Jackson,Illinois,48,2,12,10,16,1,3,1,47,23.5
 Sydney Mobley,Ohio State,38,2,28,6,0,3,3,0,46,23.0
+Natalie Kussow,Minnesota,58,2,21,8,9,1,2,2,46,23.0
+Natalie Potts,Nebraska,40,2,23,10,2,1,4,1,46,23.0
+Ava Watson,Ohio State,50,2,20,5,7,0,4,6,46,23.0
 Elina Aarnisalo,UCLA,55,2,23,8,9,0,1,3,45,22.5
-Maya Makalusky,Indiana,44,2,19,13,3,0,2,5,44,22.0
+Ashlyn Koupal,Nebraska,48,2,23,7,3,1,3,3,44,22.0
+Leah Harmon,Minnesota,59,2,25,1,2,1,6,2,44,22.0
 Casey Harter,Northwestern,80,2,26,2,10,1,1,2,44,22.0
-Cearah Parchment,Illinois,27,1,22,11,1,4,1,0,44,44.0
-Te'Yala Delfosse,Michigan,32,1,22,9,2,1,2,4,43,43.0
+Maya Makalusky,Indiana,44,2,19,13,3,0,2,5,44,22.0
 Lenée Beaumont,Indiana,42,2,24,11,3,0,1,3,43,21.5
 Adaline Sheplee,Wisconsin,55,2,29,6,3,0,2,1,43,21.5
+Te'Yala Delfosse,Michigan,32,1,22,9,2,1,2,4,43,43.0
+Gretchen Dolan,Illinois,49,2,22,9,4,1,1,4,43,21.5
 Jaylah Lampley,Rutgers,45,2,20,9,1,2,3,2,42,21.0
 Tilda Trygger,Washington,49,2,15,21,2,1,1,0,42,21.0
-KK Bransford,UCLA,47,2,20,6,2,0,6,1,41,20.5
 Alicia Courthiau,Wisconsin,55,2,18,11,5,0,3,1,41,20.5
 Saniyah Hall,USC,23,1,22,7,1,2,2,3,41,41.0
-Ava Heiden,Iowa,41,2,22,15,2,1,0,0,41,20.5
+KK Bransford,UCLA,47,2,20,6,2,0,6,1,41,20.5
 Chazadi Wright,Iowa,55,2,21,5,5,1,2,4,41,20.5
+Ava Heiden,Iowa,41,2,22,15,2,1,0,0,41,20.5
 Timea Gardiner,UCLA,43,2,18,10,2,3,1,3,41,20.5
-Berry Wallace,Illinois,30,1,21,11,2,0,2,2,40,40.0
-Amari Whiting,Iowa,49,2,7,12,9,0,6,0,40,20.0
 Olivia Olson,Michigan,38,1,19,8,4,0,4,1,40,40.0
+Amari Whiting,Iowa,49,2,7,12,9,0,6,0,40,20.0
 Tara Daye,Rutgers,50,2,15,16,7,0,1,0,40,20.0
 Ava Black,Penn State,39,1,17,10,5,1,1,4,40,40.0
 Kylee Kitts,Ohio State,45,2,13,19,6,1,0,0,40,20.0
-Adriana Díaz,Ohio State,38,2,9,13,4,0,6,0,38,19.0
-Avary Cain,Oregon,53,2,14,3,1,4,4,4,38,19.0
+Gracie Merkle,Minnesota,30,2,28,7,0,0,2,0,39,19.5
+Mara Braun,Minnesota,65,2,15,9,4,1,4,1,39,19.5
 Addy Brown,UCLA,47,2,15,14,8,0,0,1,38,19.0
+Avary Cain,Oregon,53,2,14,3,1,4,4,4,38,19.0
+Adriana Díaz,Ohio State,38,2,9,13,4,0,6,0,38,19.0
+Emily Fisher,Nebraska,33,2,17,9,1,1,4,1,38,19.0
 Jazzy Davidson,USC,27,1,23,5,4,0,2,1,37,37.0
 Amy Terrian,Michigan State,44,2,18,6,1,0,3,6,37,18.5
-Malia Samuels,Indiana,42,2,13,5,10,0,3,2,36,18.0
 Lexi Blue,Northwestern,62,2,15,9,3,1,3,1,36,18.0
-Brooklynn Haywood,Oregon,45,2,23,1,5,1,1,2,35,17.5
+Malia Samuels,Indiana,42,2,13,5,10,0,3,2,36,18.0
+Monique Bobongie,Michigan State,52,2,17,9,4,2,0,1,35,17.5
 Kenzie Hare,Indiana,51,2,21,3,2,0,2,5,35,17.5
 Tabitha Betson,Michigan State,48,2,11,15,5,0,2,0,35,17.5
-Monique Bobongie,Michigan State,52,2,17,9,4,2,0,1,35,17.5
-Grace Grocholski,Minnesota,34,1,20,6,5,0,0,3,34,34.0
+Brooklynn Haywood,Oregon,45,2,23,1,5,1,1,2,35,17.5
 JuJu Watkins,USC,25,1,21,5,2,1,2,0,34,34.0
+Allison Weidner,Nebraska,38,2,15,1,6,1,5,0,34,17.0
 Taylor Stremlow,Iowa,41,2,10,9,3,2,3,1,33,16.5
+Aaliyah Guyton,Illinois,41,2,21,5,4,0,0,3,33,16.5
 Devin Coppinger,Washington,52,2,15,5,1,0,5,1,32,16.0
 Somto Okafor,UCLA,40,2,9,6,4,0,6,1,32,16.0
 Camdyn Nelson,Northwestern,67,2,16,7,6,0,0,2,31,15.5
-Gracie Merkle,Minnesota,18,1,22,7,0,0,1,0,31,31.0
-Chikae Desdunes,Rutgers,47,2,16,1,4,0,3,4,31,15.5
 Alisa Williams,Indiana,30,2,24,5,2,0,0,0,31,15.5
+Chikae Desdunes,Rutgers,47,2,16,1,4,0,3,4,31,15.5
+Tori Oehrlein,Minnesota,32,2,16,3,5,0,2,2,30,15.0
+Imani Lester,Rutgers,38,2,15,9,0,2,1,0,30,15.0
 Bonnie Deas,UCLA,29,2,8,10,3,2,2,1,30,15.0
 Journey Houston,Iowa,37,2,10,9,1,0,4,2,30,15.0
-Imani Lester,Rutgers,38,2,15,9,0,2,1,0,30,15.0
-Emma Broliron,Michigan State,33,2,13,2,4,0,4,2,29,14.5
-Amiah Hargrove,Nebraska,22,1,15,9,2,0,1,1,29,29.0
 Taylor Henderson,Purdue,52,2,10,10,4,0,2,1,29,14.5
-Natalie Potts,Nebraska,20,1,14,6,1,1,3,0,29,29.0
+Emma Broliron,Michigan State,33,2,13,2,4,0,4,2,29,14.5
 Oluchi Okananwa,Maryland,26,1,11,9,4,0,2,0,28,28.0
 Kat Righeimer,Northwestern,39,2,14,4,2,1,1,4,28,14.0
+Manuella Alves,Illinois,29,2,7,14,3,1,1,0,28,14.0
+Maddie Webber,Illinois,37,2,12,7,5,1,1,0,28,14.0
 Kennedy Smith,USC,27,1,12,1,3,1,4,2,28,28.0
-Tayla Thomas,Minnesota,21,1,13,10,0,0,2,0,27,27.0
+Bri McDaniel,Maryland,34,1,11,3,6,0,3,1,27,27.0
 Zennia Thomas,Rutgers,28,2,16,8,1,0,1,0,27,13.5
 Shay Bollin,Wisconsin,23,1,13,6,2,1,1,2,27,27.0
-Bri McDaniel,Maryland,34,1,11,3,6,0,3,1,27,27.0
-Bryn Martin,Ohio State,43,2,8,2,2,1,5,2,26,13.0
 Jessica Petrie,Indiana,35,2,15,5,3,0,0,3,26,13.0
+Bryn Martin,Ohio State,43,2,8,2,2,1,5,2,26,13.0
+Jasmine Brown-Hagger,Illinois,39,2,16,2,3,0,2,1,26,13.0
 Nikki Kerstein,Wisconsin,32,2,8,11,4,0,1,0,25,12.5
-Destiny Jackson,Illinois,26,1,7,5,9,1,0,0,23,23.0
-Laci Steele,Wisconsin,37,2,8,10,3,0,1,0,23,11.5
-Mya Pauldo,Rutgers,33,2,9,6,3,0,2,1,23,11.5
 Skylar Durley,Penn State,20,1,8,3,2,0,5,0,23,23.0
+Mya Pauldo,Rutgers,33,2,9,6,3,0,2,1,23,11.5
+Laci Steele,Wisconsin,37,2,8,10,3,0,1,0,23,11.5
 GiGi Battle,Indiana,26,2,7,11,1,0,2,0,23,11.5
-Amanda Muse,UCLA,26,2,6,7,3,1,2,0,22,11.0
+Lety Vasconcelos,Illinois,26,2,10,7,1,0,2,0,22,11.0
 Layla Hays,Iowa,35,2,10,8,0,1,1,0,22,11.0
+Maddi Stewart,Nebraska,37,2,6,4,6,1,2,0,22,11.0
+Amanda Muse,UCLA,26,2,6,7,3,1,2,0,22,11.0
 Averi Aaron,Purdue,48,2,6,8,4,1,1,0,22,11.0
-Nunu Agara,Maryland,25,1,12,5,0,0,1,2,21,21.0
 Trinity Jones,Maryland,24,1,11,5,3,0,0,2,21,21.0
-Syla Swords,Michigan,40,1,10,5,1,0,1,3,21,21.0
 Jocelyn Faison,Iowa,34,2,8,9,4,0,0,0,21,10.5
+Nunu Agara,Maryland,25,1,12,5,0,0,1,2,21,21.0
 Dallas Loughridge,Michigan,39,1,5,3,9,0,2,0,21,21.0
+Kennadi Williams,Nebraska,40,2,5,1,6,0,4,1,21,10.5
+Syla Swords,Michigan,40,1,10,5,1,0,1,3,21,21.0
+Divine Bourrage,Illinois,26,2,6,12,0,0,1,0,20,10.0
+Lilly Williams,Michigan State,17,2,6,8,0,1,2,0,20,10.0
 Kaelyn Carroll,Washington,37,2,0,4,2,4,3,0,20,10.0
 Amayah Garcia,Washington,39,2,9,7,2,0,0,2,20,10.0
-Lilly Williams,Michigan State,17,2,6,8,0,1,2,0,20,10.0
-Mara Braun,Minnesota,31,1,4,5,2,1,3,0,19,19.0
+Edessa Noyan,Nebraska,27,2,6,10,3,0,0,0,19,9.5
+Ava Miles,Nebraska,31,2,4,3,2,1,4,0,19,9.5
 Anna Wypych,Michigan State,25,2,11,4,1,0,1,1,19,9.5
-Gretchen Dolan,Illinois,25,1,10,3,2,1,0,2,19,19.0
 Brooke Golden,Northwestern,20,2,9,4,2,1,1,0,19,9.5
-Natalie Kussow,Minnesota,32,1,9,4,3,0,1,0,18,18.0
 Sitaya Fagan,USC,18,1,11,0,3,1,0,1,17,17.0
 Enjulina Gonzalez,Penn State,27,1,6,6,3,0,1,0,17,17.0
 Brooke Carlson,Washington,27,2,10,1,0,1,2,0,17,8.5
 Cristen Carter,Penn State,20,1,4,8,1,1,1,0,17,17.0
-Petra Bozan,Penn State,32,1,8,6,0,1,0,0,16,16.0
-Giselle Janowski,Wisconsin,23,2,5,5,2,1,1,0,16,8.0
-Savannah White,Penn State,27,1,3,8,1,2,0,0,16,16.0
 Ashlinn James,Indiana,38,2,5,2,3,1,2,0,16,8.0
+Petra Bozan,Penn State,32,1,8,6,0,1,0,0,16,16.0
+Savannah White,Penn State,27,1,3,8,1,2,0,0,16,16.0
+Giselle Janowski,Wisconsin,23,2,5,5,2,1,1,0,16,8.0
 Caia Rose,Wisconsin,40,2,4,2,5,0,2,0,15,7.5
-Aaliyah Guyton,Illinois,17,1,9,3,1,0,0,1,14,14.0
-Courtney Ogden,Michigan,13,1,12,1,0,0,0,1,14,14.0
-Edessa Noyan,Nebraska,22,1,4,7,3,0,0,0,14,14.0
-Leah Harmon,Minnesota,30,1,8,0,0,1,2,0,14,14.0
-Kendall Dudley,Michigan,18,1,6,5,1,0,1,0,14,14.0
-Emily Fisher,Nebraska,15,1,7,3,0,0,2,0,14,14.0
 TEAM,Rutgers,0,2,0,14,0,0,0,0,14,7.0
 Devyn Quigley,Penn State,23,1,12,0,0,0,0,2,14,14.0
+Kendall Dudley,Michigan,18,1,6,5,1,0,1,0,14,14.0
+Courtney Ogden,Michigan,13,1,12,1,0,0,0,1,14,14.0
+TEAM,Minnesota,0,2,0,13,0,0,0,0,13,6.5
+TEAM,Indiana,0,2,0,13,0,0,0,0,13,6.5
 Seini Henry,Ohio State,21,2,3,7,0,0,1,1,13,6.5
 Ryann Bennett,USC,15,1,2,2,3,0,3,0,13,13.0
-Kennadi Williams,Nebraska,21,1,3,0,3,0,3,1,13,13.0
-TEAM,Indiana,0,2,0,13,0,0,0,0,13,6.5
-Ashlyn Koupal,Nebraska,19,1,7,3,0,1,0,1,13,13.0
 Hilary Fuller,Oregon,17,2,4,5,1,1,0,0,12,6.0
-Maddie Webber,Illinois,21,1,4,4,2,0,1,0,12,12.0
 Emilia Krstevski,Oregon,12,2,6,3,0,1,0,0,11,5.5
 TEAM,UCLA,0,2,0,11,0,0,0,0,11,5.5
-TEAM,Minnesota,0,1,0,10,0,0,0,0,10,10.0
+Arek Angui,Nebraska,10,1,6,4,0,0,0,0,10,10.0
 TEAM,Ohio State,0,2,0,10,0,0,0,0,10,5.0
 Filippa Tilliander,Oregon,19,2,4,6,0,0,0,0,10,5.0
 Jordyn Jackson,Maryland,25,1,5,2,0,1,0,1,10,10.0
 Pania Davis,USC,15,1,4,4,0,1,0,0,10,10.0
-Allison Weidner,Nebraska,17,1,5,0,2,0,1,0,9,9.0
-Maddi Stewart,Nebraska,18,1,2,3,4,0,0,0,9,9.0
+TEAM,Maryland,0,1,0,9,0,0,0,0,9,9.0
+Sara Sambolic,Michigan State,14,1,6,0,2,0,0,1,9,9.0
 Laura Williams,USC,13,1,3,1,0,2,0,1,9,9.0
 Kennedy Holman,Oregon,15,2,4,3,0,0,1,0,9,4.5
 TEAM,Oregon,0,2,0,9,0,0,0,0,9,4.5
-Sara Sambolic,Michigan State,14,1,6,0,2,0,0,1,9,9.0
-TEAM,Maryland,0,1,0,9,0,0,0,0,9,9.0
-Lety Vasconcelos,Illinois,8,1,4,4,1,0,0,0,9,9.0
-TEAM,Michigan State,0,2,0,8,0,0,0,0,8,4.0
 Natassja Kolff,Rutgers,23,2,1,3,0,0,2,0,8,4.0
+TEAM,Michigan State,0,2,0,8,0,0,0,0,8,4.0
 Lea Bartelme,Maryland,17,1,3,0,3,0,1,0,8,8.0
-Divine Bourrage,Illinois,11,1,2,5,0,0,0,0,7,7.0
-Jasmine Brown-Hagger,Illinois,23,1,5,0,2,0,0,0,7,7.0
-Manuella Alves,Illinois,12,1,0,4,1,1,0,0,7,7.0
 TEAM,Northwestern,0,2,0,7,0,0,0,0,7,3.5
 TEAM,Purdue,0,2,0,7,0,0,0,0,7,3.5
-Tori Oehrlein,Minnesota,14,1,4,0,1,0,1,0,7,7.0
 Rian Forestier,USC,8,1,2,4,0,0,0,0,6,6.0
-Alie Bisballe,Michigan State,3,1,2,3,1,0,0,0,6,6.0
 Maya Zilbershlag,Purdue,18,2,3,1,1,0,0,1,6,3.0
 Rainey Welson,Maryland,12,1,5,0,0,0,0,1,6,6.0
-TEAM,Iowa,0,2,0,5,0,0,0,0,5,2.5
-Uche Kaine,Michigan State,5,1,3,2,0,0,0,0,5,5.0
-TEAM,Nebraska,0,1,0,5,0,0,0,0,5,5.0
-Ava Miles,Nebraska,14,1,1,0,0,1,1,0,5,5.0
+Kennedy Klick,Minnesota,17,2,2,3,1,0,0,0,6,3.0
+TEAM,Nebraska,0,2,0,6,0,0,0,0,6,3.0
+Alie Bisballe,Michigan State,3,1,2,3,1,0,0,0,6,6.0
 Ashley Sofilkanich,Michigan,17,1,2,3,0,0,0,0,5,5.0
+Makena Christian,Minnesota,20,2,0,3,2,0,0,0,5,2.5
 Atlee Vanesko,Ohio State,23,2,2,2,1,0,0,0,5,2.5
 Kamrah Banks,Penn State,12,1,3,1,1,0,0,0,5,5.0
-TEAM,USC,0,1,0,4,0,0,0,0,4,4.0
-La'u Pele Falatea,Oregon,5,1,0,0,0,1,1,0,4,4.0
+Uche Kaine,Michigan State,5,1,3,2,0,0,0,0,5,5.0
+TEAM,Iowa,0,2,0,5,0,0,0,0,5,2.5
 TEAM,Michigan,0,1,0,4,0,0,0,0,4,4.0
 Mimi Thiero,Maryland,4,1,0,0,0,2,0,0,4,4.0
 Lina Jerković,UCLA,15,2,0,0,2,0,1,0,4,2.0
 Leah Nordin,Wisconsin,11,2,2,2,0,0,0,0,4,2.0
 Katka Sediva,Purdue,12,2,2,2,0,0,0,0,4,2.0
+TEAM,Illinois,0,2,0,4,0,0,0,0,4,2.0
+TEAM,USC,0,1,0,4,0,0,0,0,4,4.0
+La'u Pele Falatea,Oregon,5,1,0,0,0,1,1,0,4,4.0
 TEAM,Wisconsin,0,2,0,4,0,0,0,0,4,2.0
-Lauryn Swann,Rutgers,12,2,1,0,0,1,0,0,3,1.5
-Sara Okeke,USC,23,1,0,2,1,0,0,0,3,3.0
 Precious Wheeler,Rutgers,2,1,2,1,0,0,0,0,3,3.0
-TEAM,Penn State,0,1,0,3,0,0,0,0,3,3.0
-Anna Terrian,Michigan State,11,1,0,1,0,1,0,0,3,3.0
+Ona Riopedre,Illinois,2,1,2,1,0,0,0,0,3,3.0
 Ella Strömdahl,Iowa,3,1,0,0,1,0,1,0,3,3.0
 Sydney Fenn,Indiana,8,2,2,1,0,0,0,0,3,1.5
-TEAM,Illinois,0,1,0,3,0,0,0,0,3,3.0
+TEAM,Penn State,0,1,0,3,0,0,0,0,3,3.0
+Lauryn Swann,Rutgers,12,2,1,0,0,1,0,0,3,1.5
+Sara Okeke,USC,23,1,0,2,1,0,0,0,3,3.0
 Kennedy Brandt,Rutgers,2,1,0,1,0,0,1,0,3,3.0
-Kennedy Klick,Minnesota,8,1,2,0,1,0,0,0,3,3.0
-Camille Pangonis,Indiana,3,1,0,0,0,0,1,0,2,2.0
-Daniella McLean,Washington,3,2,2,0,0,0,0,0,2,1.0
+Anna Terrian,Michigan State,11,1,0,1,0,1,0,0,3,3.0
 Petra Toman,Washington,5,2,0,0,0,1,0,0,2,1.0
 Anjela Minja,Purdue,5,2,0,0,0,1,0,0,2,1.0
 Keona Douwstra,Purdue,14,2,0,2,0,0,0,0,2,1.0
 Macey Huard,Washington,5,2,0,2,0,0,0,0,2,1.0
 Ashlyn Anderson,Indiana,1,1,2,0,0,0,0,0,2,2.0
-Makena Christian,Minnesota,8,1,0,2,0,0,0,0,2,2.0
+Camille Pangonis,Indiana,3,1,0,0,0,0,1,0,2,2.0
+Daniella McLean,Washington,3,2,2,0,0,0,0,0,2,1.0
+Mia Zenere,Illinois,2,1,1,0,0,0,0,0,1,1.0
 Saige Stahl,Purdue,4,2,0,1,0,0,0,0,1,0.5
-Devin Cosgriff,Michigan,0,1,1,0,0,0,0,0,1,1.0
 TEAM,Washington,0,2,0,1,0,0,0,0,1,0.5
-Kylee Paben,Minnesota,1,1,0,0,0,0,0,0,0,0.0
+Devin Cosgriff,Michigan,0,1,1,0,0,0,0,0,1,1.0
 Brynn Senden,Minnesota,1,1,0,0,0,0,0,0,0,0.0
+Kylee Paben,Minnesota,1,1,0,0,0,0,0,0,0,0.0
+Adit Kuol,Minnesota,1,1,0,0,0,0,0,0,0,0.0
+Ciara Byars,Michigan,3,1,0,0,0,0,0,0,0,0.0
+Fope Ayo,Michigan,0,1,0,0,0,0,0,0,0,0.0
+Eva-Grace Yebila,Maryland,0,0,0,0,0,0,0,0,0,0.0
+Chloe Sotell,Maryland,0,0,0,0,0,0,0,0,0,0.0
+Bria Medina,Iowa,5,1,0,0,0,0,0,0,0,0.0
 Zoey Bershers,Minnesota,1,1,0,0,0,0,0,0,0,0.0
 Jessica Fields,Michigan,0,1,0,0,0,0,0,0,0,0.0
-Adit Kuol,Minnesota,1,1,0,0,0,0,0,0,0,0.0
-Fope Ayo,Michigan,0,1,0,0,0,0,0,0,0,0.0
 Carter McCray,Michigan State,0,0,0,0,0,0,0,0,0,0.0
-Chloe Sotell,Maryland,0,0,0,0,0,0,0,0,0,0.0
-Eva-Grace Yebila,Maryland,0,0,0,0,0,0,0,0,0,0.0
-Ona Riopedre,Illinois,0,0,0,0,0,0,0,0,0,0.0
-Bria Medina,Iowa,5,1,0,0,0,0,0,0,0,0.0
-Mia Zenere,Illinois,0,0,0,0,0,0,0,0,0,0.0
-Ciara Byars,Michigan,3,1,0,0,0,0,0,0,0,0.0
 Crystal Wang,Northwestern,0,0,0,0,0,0,0,0,0,0.0
 Rachel Mutombo,Northwestern,0,0,0,0,0,0,0,0,0,0.0
 McKenna Layden,Purdue,0,0,0,0,0,0,0,0,0,0.0
