@@ -3,6 +3,8 @@ let playersData = [];
 let yesterdayPlayersData = [];
 let positionCategories = {};
 let seasonLoadId = 0;
+let archivedSeasonActive = false;
+let yesterdayRefreshTimer = null;
 let tableSortingInitialized = false;
 const tableSortStates = new Map();
 
@@ -21,8 +23,6 @@ function getDailyOutputDates() {
         Number(dateParts.month) - 1,
         Number(dateParts.day)
     ));
-    if (Number(dateParts.hour) < 9) dataDate.setUTCDate(dataDate.getUTCDate() - 1);
-
     const dates = [dataDate.toISOString().slice(0, 10)];
     dataDate.setUTCDate(dataDate.getUTCDate() - 1);
     dates.push(dataDate.toISOString().slice(0, 10));
@@ -32,8 +32,8 @@ function getDailyOutputDates() {
 async function fetchDailyOutput(suffix) {
     const dates = getDailyOutputDates();
     for (const [index, date] of dates.entries()) {
-        const filename = `daily-outputs-27/${date}${suffix}`;
-        const response = await fetch(filename);
+        const filename = `daily-outputs-27/${date}${suffix}?updated=${Date.now()}`;
+        const response = await fetch(filename, {cache: 'no-store'});
         if (response.ok) {
             if (index > 0) {
                 console.warn(`Latest daily output unavailable; using previous file ${filename}.`);
@@ -48,12 +48,12 @@ async function fetchDailyOutput(suffix) {
 async function fetchAndProcessData() {
     try {
         const [teamsResponse, playersFile] = await Promise.all([
-            fetch('entries.json'),
+            fetch('entries27.json'),
             fetchDailyOutput('.csv')
         ]);
 
         if (!teamsResponse.ok) {
-            throw new Error(`Entries request failed (HTTP ${teamsResponse.status})`);
+            throw new Error(`entries27.json request failed (HTTP ${teamsResponse.status})`);
         }
 
         const teamsData = await teamsResponse.json();
@@ -95,10 +95,10 @@ function scoreTeams(teams, players) {
     const pointsByPlayer = new Map(players.map(player => [player.name, player.fantasy_points]));
 
     teams.forEach(team => {
-        for (let pick = 1; pick <= 10; pick++) {
+        for (let pick = 1; pick <= 11; pick++) {
             team[`p${pick}_points`] = pointsByPlayer.get(team[`p${pick}`]) || 0;
         }
-        team.total_score = Array.from({length: 10}, (_, index) => team[`p${index + 1}_points`])
+        team.total_score = Array.from({length: 11}, (_, index) => team[`p${index + 1}_points`])
             .reduce((total, points) => total + points, 0);
     });
 
@@ -201,8 +201,12 @@ async function loadArchivedSeasonData() {
 async function loadSeason(season) {
     const loadId = ++seasonLoadId;
     const isArchivedSeason = season === '2025-26';
+    archivedSeasonActive = isArchivedSeason;
+    clearInterval(yesterdayRefreshTimer);
+    yesterdayRefreshTimer = null;
     const seasonDescription = document.getElementById('season-description');
     seasonDescription.textContent = isArchivedSeason ? '2025-26 Final Standings' : '2026-27 Full Season Standings';
+    updateCategoryHeaders(isArchivedSeason);
     document.title = `Fantasy Big Ten Basketball Standings (${season})`;
     document.getElementById('loading').textContent = `Loading ${season} Standings...`;
     document.getElementById('loading').style.display = 'block';
@@ -232,13 +236,14 @@ async function loadSeason(season) {
             document.getElementById('yesterday-date').textContent = 'Sunday, April 5, 2026 (Championship Game)';
         } else {
             await loadYesterdayData();
+            startYesterdayRefreshes();
             await loadCategories();
             if (loadId !== seasonLoadId) return;
         }
 
         populateTopTeams(teamsData.slice(0, 5));
         populateTopPlayers(playersData.slice(0, 10));
-        populateTopByCategory();
+        populateTopByCategory(isArchivedSeason);
         populateFullTeams(teamsData);
         populateFullPlayers(playersData);
 
@@ -260,20 +265,65 @@ async function loadSeason(season) {
     }
 }
 
+function startYesterdayRefreshes() {
+    const hour = Number(new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        hour: '2-digit',
+        hourCycle: 'h23'
+    }).format(new Date()));
+    if (hour >= 9) return;
+
+    yesterdayRefreshTimer = setInterval(() => {
+        const hour = Number(new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/New_York',
+            hour: '2-digit',
+            hourCycle: 'h23'
+        }).format(new Date()));
+        if (hour >= 9) {
+            clearInterval(yesterdayRefreshTimer);
+            yesterdayRefreshTimer = null;
+            return;
+        }
+        loadYesterdayData();
+    }, 15 * 60 * 1000);
+}
+
+function updateCategoryHeaders(isArchivedSeason) {
+    const labels = isArchivedSeason
+        ? ['Betts', 'Scorer', 'All-Conf', 'Newcomer', 'Shooter', 'Post', 'Guard', 'Forward', 'Freshman', 'Wildcard']
+        : ['Star', 'Top Scorer', 'All-Conference', 'Newcomer', 'Wings', 'Post', 'Shooter', 'Breakout Guard', 'Breakout Forward', 'Freshman', 'Wildcard'];
+
+    document.querySelectorAll('#teams-table th[data-pick]').forEach((header, index) => {
+        header.textContent = labels[index];
+        header.hidden = isArchivedSeason && index === 10;
+    });
+    document.querySelectorAll('#teams-table td[data-pick="11"]').forEach(cell => {
+        cell.hidden = isArchivedSeason;
+    });
+}
+
 async function loadYesterdayData() {
     try {
         const dailyFile = await fetchDailyOutput('_daily.json');
         yesterdayPlayersData = await dailyFile.response.json()
         populateYesterdayPlayers(yesterdayPlayersData.slice(0, 5));
 
-        const dateStr = new Date(`${dailyFile.date}T00:00:00Z`).toLocaleDateString('en-US', {
+        const reportDate = new Date(`${dailyFile.date}T00:00:00Z`);
+        const dateStr = reportDate.toLocaleDateString('en-US', {
             timeZone: 'UTC',
             weekday: 'long',
             year: 'numeric',
             month: 'long',
             day: 'numeric',
         });
-        document.getElementById('yesterday-date').textContent = dateStr;
+        const reportDateStr = reportDate.toLocaleDateString('en-US', {
+            timeZone: 'UTC',
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+        document.getElementById('yesterday-date').textContent = reportDateStr;
 
     } catch (error) {
         console.error('Error loading yesterday data:', error);
@@ -290,10 +340,10 @@ async function loadYesterdayData() {
 
 async function loadCategories() {
     try {
-        const response = await fetch('categories.json')
+        const response = await fetch('categories27.json')
 
         if (!response.ok) {
-            throw new Error('Positions file not found');
+            throw new Error(`categories27.json request failed (HTTP ${response.status})`);
         }
 
         positionCategories = await response.json();
@@ -388,19 +438,23 @@ function populateFullTeams(teams) {
         <tr>
             <td class="rank">${team.rank}</td>
             <td>${team.team}</td>
-            <td>${team.p1} (${team.p1_points})</td>
-            <td>${team.p2} (${team.p2_points})</td>
-            <td>${team.p3} (${team.p3_points})</td>
-            <td>${team.p4} (${team.p4_points})</td>
-            <td>${team.p5} (${team.p5_points})</td>
-            <td>${team.p6} (${team.p6_points})</td>
-            <td>${team.p7} (${team.p7_points})</td>
-            <td>${team.p8} (${team.p8_points})</td>
-            <td>${team.p9} (${team.p9_points})</td>
-            <td>${team.p10} (${team.p10_points})</td>
+            <td data-pick="1">${team.p1} (${team.p1_points})</td>
+            <td data-pick="2">${team.p2} (${team.p2_points})</td>
+            <td data-pick="3">${team.p3} (${team.p3_points})</td>
+            <td data-pick="4">${team.p4} (${team.p4_points})</td>
+            <td data-pick="5">${team.p5} (${team.p5_points})</td>
+            <td data-pick="6">${team.p6} (${team.p6_points})</td>
+            <td data-pick="7">${team.p7} (${team.p7_points})</td>
+            <td data-pick="8">${team.p8} (${team.p8_points})</td>
+            <td data-pick="9">${team.p9} (${team.p9_points})</td>
+            <td data-pick="10">${team.p10} (${team.p10_points})</td>
+            <td data-pick="11">${team.p11 || '—'} (${team.p11_points})</td>
             <td class="points">${team.total_score}</td>
         </tr>
     `).join('');
+    tbody.querySelectorAll('td[data-pick="11"]').forEach(cell => {
+        cell.hidden = archivedSeasonActive;
+    });
 }
 
 function populateFullPlayers(players) {
@@ -436,10 +490,10 @@ function populateYesterdayPlayers(players) {
     `).join('');
 }
 
-function populateTopByCategory() {
+function populateTopByCategory(isArchivedSeason) {
     const tbody = document.getElementById('top-by-category-body');
 
-    const positionOrder = [
+    const positionOrder = isArchivedSeason ? [
         {key: 'p1', label: 'Betts'},
         {key: 'p2', label: 'Returning Scorer'},
         {key: 'p3', label: 'All-Conference'},
@@ -450,6 +504,18 @@ function populateTopByCategory() {
         {key: 'p8', label: 'Breakout Forward'},
         {key: 'p9', label: 'Freshman'},
         {key: 'p10', label: 'Wildcard'}
+    ] : [
+        {key: 'p1', label: 'Star'},
+        {key: 'p2', label: 'Top Scorer'},
+        {key: 'p3', label: 'All-Conference'},
+        {key: 'p4', label: 'Newcomer'},
+        {key: 'p5', label: 'Wings'},
+        {key: 'p6', label: 'Post'},
+        {key: 'p7', label: 'Shooter'},
+        {key: 'p8', label: 'Breakout Guard'},
+        {key: 'p9', label: 'Breakout Forward'},
+        {key: 'p10', label: 'Freshman'},
+        {key: 'p11', label: 'Wildcard'}
     ];
 
     let html = '';

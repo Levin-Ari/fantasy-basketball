@@ -14,16 +14,21 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'         # 7:00 AM EDT
-    - cron: '0 19-23,0-3 * * *'  # 3 PM to 11 PM EDT
+    # GitHub cron uses UTC. This covers the 9 AM Eastern cutoff in either DST offset.
+    - cron: '*/15 11-14 * * *'
+    # Refresh hourly during the afternoon/evening games in both DST offsets.
+    - cron: '0 18-23,0-5 * * *'
+concurrency:
+  group: daily-output-update
+  cancel-in-progress: false
 jobs:
   daily:
     runs-on: ubuntu-latest
     steps:
     - name: Check out this repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
     - name: Install all necessary packages
