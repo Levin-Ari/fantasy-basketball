@@ -38,7 +38,7 @@
         "p7":  "Chazadi Wright",
         "p8":  "Destiny Jackson",
         "p9":  "Sara Okeke",
-        "p10":  "Gigi Battle",
+        "p10":  "GiGi Battle",
         "p11":  "Sitaya Fagan"
     },
     {
@@ -292,5 +292,61 @@
         "p9":  "Maya Makalusky",
         "p10":  "McKenna Woliczko",
         "p11":  "Addison Deal"
+    },
+    {
+        "team":  "Bring Bac the Pac",
+        "p1":  "JuJu Watkins",
+        "p2":  "Olivia Olson",
+        "p3":  "Jazzy Davidson",
+        "p4":  "Saniyah Hall",
+        "p5":  "Katie Fiso",
+        "p6":  "Sienna Betts",
+        "p7":  "Timea Gardiner",
+        "p8":  "Bri McDaniel",
+        "p9":  "Te\u0027Yala Delfosse",
+        "p10":  "McKenna Woliczko",
+        "p11":  "Elina Aarnisalo"
+    },
+    {
+        "team":  "Blue Machine",
+        "p1":  "JuJu Watkins",
+        "p2":  "Olivia Olson",
+        "p3":  "Jazzy Davidson",
+        "p4":  "Addy Brown",
+        "p5":  "Mara Braun",
+        "p6":  "Elsa Lemmilä",
+        "p7":  "Kyndall Hunter",
+        "p8":  "Logan Nissley",
+        "p9":  "Te\u0027Yala Delfosse",
+        "p10":  "GiGi Battle",
+        "p11":  "Addison Deal"
+    },
+    {
+        "team":  "Fralick Fever Dream",
+        "p1":  "JuJu Watkins",
+        "p2":  "Oluchi Okananwa",
+        "p3":  "Syla Swords",
+        "p4":  "Saniyah Hall",
+        "p5":  "Kennedy Blair",
+        "p6":  "Ehis Etute",
+        "p7":  "Theryn Hallock",
+        "p8":  "Leah Harmon",
+        "p9":  "Maya Makalusky",
+        "p10":  "Lilly Williams",
+        "p11":  "Romana Jelenc"
+    },
+    {
+        "team":  "Slick Back",
+        "p1":  "Jaloni Cambridge",
+        "p2":  "Olivia Olson",
+        "p3":  "Britt Prince",
+        "p4":  "Saniyah Hall",
+        "p5":  "Kennedy Blair",
+        "p6":  "Sienna Betts",
+        "p7":  "Addi Mack",
+        "p8":  "Bri McDaniel",
+        "p9":  "Sara Okeke",
+        "p10":  "GiGi Battle",
+        "p11":  "Kylee Kitts"
     }
 ]
