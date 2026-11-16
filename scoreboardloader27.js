@@ -5,10 +5,11 @@ let positionCategories = {};
 let seasonLoadId = 0;
 let archivedSeasonActive = false;
 let yesterdayRefreshTimer = null;
+let yesterdayReportDate = null;
 let tableSortingInitialized = false;
 const tableSortStates = new Map();
 
-function getDailyOutputDates() {
+function getDailyOutputDates(dayOffset = 0) {
     const nowParts = new Intl.DateTimeFormat('en-US', {
         timeZone: 'America/New_York',
         year: 'numeric',
@@ -23,15 +24,17 @@ function getDailyOutputDates() {
         Number(dateParts.month) - 1,
         Number(dateParts.day)
     ));
+    dataDate.setUTCDate(dataDate.getUTCDate() + dayOffset);
     const dates = [dataDate.toISOString().slice(0, 10)];
     dataDate.setUTCDate(dataDate.getUTCDate() - 1);
     dates.push(dataDate.toISOString().slice(0, 10));
     return dates;
 }
 
-async function fetchDailyOutput(suffix) {
-    const dates = getDailyOutputDates();
-    for (const [index, date] of dates.entries()) {
+async function fetchDailyOutput(suffix, dayOffset = 0, allowFallback = true) {
+    const dates = getDailyOutputDates(dayOffset);
+    const datesToTry = allowFallback ? dates : dates.slice(0, 1);
+    for (const [index, date] of datesToTry.entries()) {
         const filename = `daily-outputs-27/${date}${suffix}?updated=${Date.now()}`;
         const response = await fetch(filename, {cache: 'no-store'});
         if (response.ok) {
@@ -42,7 +45,7 @@ async function fetchDailyOutput(suffix) {
         }
     }
 
-    throw new Error(`No daily output file found for ${dates.join(' or ')}`);
+    throw new Error(`No daily output file found for ${datesToTry.join(' or ')}`);
 }
 
 async function fetchAndProcessData() {
@@ -204,6 +207,7 @@ async function loadSeason(season) {
     archivedSeasonActive = isArchivedSeason;
     clearInterval(yesterdayRefreshTimer);
     yesterdayRefreshTimer = null;
+    yesterdayReportDate = null;
     const seasonDescription = document.getElementById('season-description');
     seasonDescription.textContent = isArchivedSeason ? '2025-26 Final Standings' : '2026-27 Full Season Standings';
     updateCategoryHeaders(isArchivedSeason);
@@ -266,26 +270,12 @@ async function loadSeason(season) {
 }
 
 function startYesterdayRefreshes() {
-    const hour = Number(new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/New_York',
-        hour: '2-digit',
-        hourCycle: 'h23'
-    }).format(new Date()));
-    if (hour >= 9) return;
-
     yesterdayRefreshTimer = setInterval(() => {
-        const hour = Number(new Intl.DateTimeFormat('en-US', {
-            timeZone: 'America/New_York',
-            hour: '2-digit',
-            hourCycle: 'h23'
-        }).format(new Date()));
-        if (hour >= 9) {
-            clearInterval(yesterdayRefreshTimer);
-            yesterdayRefreshTimer = null;
-            return;
+        const expectedReportDate = getDailyOutputDates(-1)[0];
+        if (expectedReportDate !== yesterdayReportDate) {
+            loadYesterdayData();
         }
-        loadYesterdayData();
-    }, 15 * 60 * 1000);
+    }, 60 * 1000);
 }
 
 function updateCategoryHeaders(isArchivedSeason) {
@@ -304,18 +294,12 @@ function updateCategoryHeaders(isArchivedSeason) {
 
 async function loadYesterdayData() {
     try {
-        const dailyFile = await fetchDailyOutput('_daily.json');
+        const dailyFile = await fetchDailyOutput('_daily.json', -1, false);
         yesterdayPlayersData = await dailyFile.response.json()
         populateYesterdayPlayers(yesterdayPlayersData.slice(0, 5));
+        yesterdayReportDate = dailyFile.date;
 
         const reportDate = new Date(`${dailyFile.date}T00:00:00Z`);
-        const dateStr = reportDate.toLocaleDateString('en-US', {
-            timeZone: 'UTC',
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-        });
         const reportDateStr = reportDate.toLocaleDateString('en-US', {
             timeZone: 'UTC',
             weekday: 'long',

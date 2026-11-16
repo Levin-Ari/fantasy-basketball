@@ -35,6 +35,20 @@ jobs:
       run: pip install pandas requests
     - name: Updating the daily top players JSON
       run: python daily-creator27.py
+    - name: Preserve the cutoff snapshot if daily generation fails
+      if: failure()
+      run: |-
+        snapshot_date=$(TZ=America/New_York date +%F)
+        snapshot_file="daily-outputs-27/cutoff-snapshots/${snapshot_date}.csv"
+        if [ -f "$snapshot_file" ]; then
+          git add "$snapshot_file"
+          if ! git diff --cached --quiet; then
+            git config user.name "Automated"
+            git config user.email "actions@users.noreply.github.com"
+            git commit -m "Save cutoff snapshot: ${snapshot_date}"
+            git push
+          fi
+        fi
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
