@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from pathlib import Path
+import warnings
 from zoneinfo import ZoneInfo
 
 import pandas as pd
@@ -38,9 +39,19 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
 
     yesterday_snapshot = snapshot_directory / f"{yesterday_name}.csv"
     if not yesterday_snapshot.exists():
-        raise FileNotFoundError(
-            f"No 9 a.m. Eastern cutoff snapshot found for {yesterday_name}: "
-            f"{yesterday_snapshot}"
+        yesterday_snapshot = output_path / f"{yesterday_name}.csv"
+        if not yesterday_snapshot.exists():
+            raise FileNotFoundError(
+                f"No 9 a.m. Eastern cutoff snapshot or dated stats CSV found for "
+                f"{yesterday_name}"
+            )
+        warnings.warn(
+            f"No 9 a.m. Eastern cutoff snapshot found for {yesterday_name}; "
+            f"using the latest dated stats CSV {yesterday_snapshot} as a "
+            "recovery baseline. Daily points may omit games already included "
+            "in that CSV.",
+            RuntimeWarning,
+            stacklevel=2,
         )
 
     previous_players = pd.read_csv(yesterday_snapshot)

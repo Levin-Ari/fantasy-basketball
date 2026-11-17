@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+import warnings
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -45,7 +46,7 @@ class DailyOutputTests(unittest.TestCase):
             }
             self.assertEqual(daily_scores, {"Player One": 30, "Player Two": 30})
 
-    def test_missing_cutoff_snapshot_does_not_fall_back_to_rolling_csv(self):
+    def test_missing_cutoff_snapshot_uses_dated_csv_with_warning(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             output_directory = Path(temporary_directory)
             pd.DataFrame(
@@ -55,8 +56,34 @@ class DailyOutputTests(unittest.TestCase):
                 [{"name": "Player One", "team": "Team A", "fantasy_points": 125}]
             )
 
+            with warnings.catch_warnings(record=True) as caught_warnings:
+                warnings.simplefilter("always")
+                write_daily_outputs(
+                    players,
+                    output_directory,
+                    datetime(
+                        2026, 11, 16, 2, 0, tzinfo=ZoneInfo("America/New_York")
+                    ),
+                )
+
+            self.assertEqual(len(caught_warnings), 1)
+            self.assertIn("recovery baseline", str(caught_warnings[0].message))
+            daily_players = json.loads(
+                (output_directory / "2026-11-16_daily.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual(daily_players[0]["daily_points"], 25)
+
+    def test_missing_cutoff_snapshot_and_dated_csv_still_fails(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_directory = Path(temporary_directory)
+            players = pd.DataFrame(
+                [{"name": "Player One", "team": "Team A", "fantasy_points": 125}]
+            )
+
             with self.assertRaisesRegex(
-                FileNotFoundError, "9 a.m. Eastern cutoff snapshot"
+                FileNotFoundError, "cutoff snapshot or dated stats CSV"
             ):
                 write_daily_outputs(
                     players,
