@@ -37,7 +37,7 @@ class DailyOutputTests(unittest.TestCase):
             )
 
             daily_players = json.loads(
-                (output_directory / "2026-11-16_daily.json").read_text(
+                (output_directory / "2026-11-15_daily.json").read_text(
                     encoding="utf-8"
                 )
             )
@@ -69,7 +69,7 @@ class DailyOutputTests(unittest.TestCase):
             self.assertEqual(len(caught_warnings), 1)
             self.assertIn("recovery baseline", str(caught_warnings[0].message))
             daily_players = json.loads(
-                (output_directory / "2026-11-16_daily.json").read_text(
+                (output_directory / "2026-11-15_daily.json").read_text(
                     encoding="utf-8"
                 )
             )
@@ -93,30 +93,65 @@ class DailyOutputTests(unittest.TestCase):
                     ),
                 )
 
-            self.assertFalse((output_directory / "2026-11-16_daily.json").exists())
+            self.assertFalse((output_directory / "2026-11-15_daily.json").exists())
 
-    def test_nine_am_snapshot_is_saved_even_if_previous_snapshot_is_missing(self):
+    def test_nine_am_snapshot_becomes_current_days_baseline(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             output_directory = Path(temporary_directory)
             players = pd.DataFrame(
                 [{"name": "Player One", "team": "Team A", "fantasy_points": 125}]
             )
 
-            with self.assertRaises(FileNotFoundError):
-                write_daily_outputs(
-                    players,
-                    output_directory,
-                    datetime(
-                        2026, 11, 16, 9, 30, tzinfo=ZoneInfo("America/New_York")
-                    ),
-                )
+            write_daily_outputs(
+                players,
+                output_directory,
+                datetime(
+                    2026, 11, 16, 9, 30, tzinfo=ZoneInfo("America/New_York")
+                ),
+            )
 
             snapshot = pd.read_csv(
                 output_directory / "cutoff-snapshots" / "2026-11-16.csv"
             )
             self.assertEqual(snapshot.loc[0, "fantasy_points"], 125)
+            daily_players = json.loads(
+                (output_directory / "2026-11-16_daily.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual(daily_players[0]["daily_points"], 0)
 
-    def test_seven_am_uses_the_current_eastern_date_and_previous_cutoff(self):
+    def test_nine_am_cutoff_uses_utc_timestamps_in_both_dst_offsets(self):
+        for utc_time, report_date in (
+            (datetime(2026, 7, 15, 13, 0, tzinfo=timezone.utc), "2026-07-15"),
+            (datetime(2026, 11, 16, 14, 0, tzinfo=timezone.utc), "2026-11-16"),
+        ):
+            with self.subTest(report_date=report_date):
+                with tempfile.TemporaryDirectory() as temporary_directory:
+                    output_directory = Path(temporary_directory)
+                    players = pd.DataFrame(
+                        [
+                            {
+                                "name": "Player One",
+                                "team": "Team A",
+                                "fantasy_points": 125,
+                            }
+                        ]
+                    )
+
+                    write_daily_outputs(players, output_directory, utc_time)
+
+                    snapshot = pd.read_csv(
+                        output_directory
+                        / "cutoff-snapshots"
+                        / f"{report_date}.csv"
+                    )
+                    self.assertEqual(snapshot.loc[0, "fantasy_points"], 125)
+                    self.assertTrue(
+                        (output_directory / f"{report_date}_daily.json").exists()
+                    )
+
+    def test_seven_am_updates_the_previous_eastern_date(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             output_directory = Path(temporary_directory)
             snapshots = output_directory / "cutoff-snapshots"
@@ -133,14 +168,49 @@ class DailyOutputTests(unittest.TestCase):
             )
             write_daily_outputs(players, output_directory, seven_am_eastern)
 
-            self.assertTrue((output_directory / "2026-11-09_daily.json").exists())
+            self.assertTrue((output_directory / "2026-11-08_daily.json").exists())
+            self.assertFalse((output_directory / "2026-11-09_daily.json").exists())
             self.assertFalse((snapshots / "2026-11-09.csv").exists())
             daily_players = json.loads(
-                (output_directory / "2026-11-09_daily.json").read_text(
+                (output_directory / "2026-11-08_daily.json").read_text(
                     encoding="utf-8"
                 )
             )
             self.assertEqual(daily_players[0]["daily_points"], 25)
+
+    def test_report_date_switches_at_nine_am_eastern(self):
+        players = pd.DataFrame(
+            [{"name": "Player One", "team": "Team A", "fantasy_points": 125}]
+        )
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_directory = Path(temporary_directory)
+            snapshots = output_directory / "cutoff-snapshots"
+            snapshots.mkdir()
+            pd.DataFrame(
+                [{"name": "Player One", "team": "Team A", "fantasy_points": 100}]
+            ).to_csv(snapshots / "2026-11-15.csv", index=False)
+
+            write_daily_outputs(
+                players,
+                output_directory,
+                datetime(2026, 11, 16, 13, 59, tzinfo=timezone.utc),
+            )
+
+            self.assertTrue((output_directory / "2026-11-15_daily.json").exists())
+            self.assertFalse((output_directory / "2026-11-16_daily.json").exists())
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_directory = Path(temporary_directory)
+
+            write_daily_outputs(
+                players,
+                output_directory,
+                datetime(2026, 11, 16, 14, 0, tzinfo=timezone.utc),
+            )
+
+            self.assertFalse((output_directory / "2026-11-15_daily.json").exists())
+            self.assertTrue((output_directory / "2026-11-16_daily.json").exists())
 
     def test_daily_scores_keep_the_previous_morning_baseline(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -152,7 +222,7 @@ class DailyOutputTests(unittest.TestCase):
                     {"name": "Player One", "team": "Team A", "fantasy_points": 100},
                     {"name": "Player Two", "team": "Team B", "fantasy_points": 40},
                 ]
-            ).to_csv(snapshots / "2026-11-08.csv", index=False)
+            ).to_csv(snapshots / "2026-11-09.csv", index=False)
 
             players = pd.DataFrame(
                 [
@@ -184,7 +254,7 @@ class DailyOutputTests(unittest.TestCase):
             self.assertEqual(daily_scores["Player One"], 45)
 
             morning_snapshot = pd.read_csv(snapshots / "2026-11-09.csv")
-            self.assertEqual(morning_snapshot.loc[0, "fantasy_points"], 130)
+            self.assertEqual(morning_snapshot.loc[0, "fantasy_points"], 100)
 
 
 if __name__ == "__main__":

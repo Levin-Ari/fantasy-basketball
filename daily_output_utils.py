@@ -17,9 +17,9 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
         current_time = current_time.astimezone(EASTERN)
 
     today = current_time.date()
-    yesterday = today - timedelta(days=1)
+    report_date = today if current_time.hour >= 9 else today - timedelta(days=1)
     today_name = today.isoformat()
-    yesterday_name = yesterday.isoformat()
+    report_date_name = report_date.isoformat()
 
     output_path = Path(output_directory)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -27,7 +27,6 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
     current_players["fantasy_points"] = pd.to_numeric(
         current_players["fantasy_points"], errors="raise"
     )
-    current_players.to_csv(output_path / f"{today_name}.csv", index=False)
 
     snapshot_directory = output_path / "cutoff-snapshots"
     snapshot_directory.mkdir(exist_ok=True)
@@ -37,24 +36,24 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
             today_snapshot, index=False
         )
 
-    yesterday_snapshot = snapshot_directory / f"{yesterday_name}.csv"
-    if not yesterday_snapshot.exists():
-        yesterday_snapshot = output_path / f"{yesterday_name}.csv"
-        if not yesterday_snapshot.exists():
+    baseline_snapshot = snapshot_directory / f"{report_date_name}.csv"
+    if not baseline_snapshot.exists():
+        baseline_snapshot = output_path / f"{report_date_name}.csv"
+        if not baseline_snapshot.exists():
             raise FileNotFoundError(
                 f"No 9 a.m. Eastern cutoff snapshot or dated stats CSV found for "
-                f"{yesterday_name}"
+                f"{report_date_name}"
             )
         warnings.warn(
-            f"No 9 a.m. Eastern cutoff snapshot found for {yesterday_name}; "
-            f"using the latest dated stats CSV {yesterday_snapshot} as a "
+            f"No 9 a.m. Eastern cutoff snapshot found for {report_date_name}; "
+            f"using the latest dated stats CSV {baseline_snapshot} as a "
             "recovery baseline. Daily points may omit games already included "
             "in that CSV.",
             RuntimeWarning,
             stacklevel=2,
         )
 
-    previous_players = pd.read_csv(yesterday_snapshot)
+    previous_players = pd.read_csv(baseline_snapshot)
     previous_players = previous_players[["name", "team", "fantasy_points"]].rename(
         columns={"fantasy_points": "past_points"}
     )
@@ -62,6 +61,7 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
         previous_players["past_points"], errors="raise"
     )
 
+    current_players.to_csv(output_path / f"{report_date_name}.csv", index=False)
     daily_players = current_players[["name", "team", "fantasy_points"]].merge(
         previous_players, how="left", on=["name", "team"]
     )
@@ -71,4 +71,6 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
     )
     daily_players.sort_values(
         by="daily_points", ascending=False
-    ).to_json(output_path / f"{today_name}_daily.json", orient="records", indent=2)
+    ).to_json(
+        output_path / f"{report_date_name}_daily.json", orient="records", indent=2
+    )
