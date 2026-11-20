@@ -40,15 +40,27 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
     if not baseline_snapshot.exists():
         baseline_snapshot = output_path / f"{report_date_name}.csv"
         if not baseline_snapshot.exists():
-            raise FileNotFoundError(
-                f"No 9 a.m. Eastern cutoff snapshot or dated stats CSV found for "
-                f"{report_date_name}"
-            )
+            earlier_stats = []
+            for candidate in output_path.glob("????-??-??.csv"):
+                try:
+                    candidate_date = datetime.strptime(
+                        candidate.stem, "%Y-%m-%d"
+                    ).date()
+                except ValueError:
+                    continue
+                if candidate_date < report_date:
+                    earlier_stats.append((candidate_date, candidate))
+            if earlier_stats:
+                baseline_snapshot = max(earlier_stats)[1]
+            else:
+                raise FileNotFoundError(
+                    f"No 9 a.m. Eastern cutoff snapshot or dated stats CSV found "
+                    f"for {report_date_name}"
+                )
         warnings.warn(
             f"No 9 a.m. Eastern cutoff snapshot found for {report_date_name}; "
-            f"using the latest dated stats CSV {baseline_snapshot} as a "
-            "recovery baseline. Daily points may omit games already included "
-            "in that CSV.",
+            f"using {baseline_snapshot} as a recovery baseline. Daily points "
+            "may include games since that CSV.",
             RuntimeWarning,
             stacklevel=2,
         )
@@ -60,6 +72,11 @@ def write_daily_outputs(players_df: pd.DataFrame, output_directory: str | Path, 
     previous_players["past_points"] = pd.to_numeric(
         previous_players["past_points"], errors="raise"
     )
+    report_snapshot = snapshot_directory / f"{report_date_name}.csv"
+    if not report_snapshot.exists():
+        previous_players.rename(columns={"past_points": "fantasy_points"}).to_csv(
+            report_snapshot, index=False
+        )
 
     current_players.to_csv(output_path / f"{report_date_name}.csv", index=False)
     daily_players = current_players[["name", "team", "fantasy_points"]].merge(
